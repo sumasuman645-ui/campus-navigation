@@ -1,0 +1,205 @@
+/* Campus Compass - Futuristic Campus Digital Twin Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-glow: rgba(37, 99, 235, 0.4);
+  --accessible-green: #10b981;
+  --accessible-green-glow: rgba(16, 185, 129, 0.4);
+  --congestion-amber: #f59e0b;
+  --emergency-red: #ef4444;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Dark Mode Theme Variables */
+body.dark-mode {
+  --bg-surface: #0f172a;
+  --bg-subtle: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-light: #334155;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  background-color: #0b0f19;
+  color: #f8fafc;
+}
+
+body.dark-mode .ground-bg {
+  fill: #0b1329 !important;
+}
+
+body.dark-mode .campus-inner-lot {
+  fill: #0f172a !important;
+  stroke: #1e293b !important;
+}
+
+body.dark-mode .path-base {
+  stroke: #1e293b !important;
+}
+
+body.dark-mode .building-label {
+  fill: #e2e8f0 !important;
+}
+
+/* High Contrast Mode (WCAG AAA) */
+body.high-contrast {
+  --primary-blue: #0044ff;
+  --accessible-green: #008800;
+  --congestion-amber: #ff9900;
+  --emergency-red: #ff0000;
+  --bg-surface: #000000;
+  --bg-subtle: #121212;
+  --text-main: #ffff00;
+  --text-muted: #ffffff;
+  --border-light: #ffff00;
+  background-color: #000000;
+  color: #ffff00;
+}
+
+body.high-contrast .ground-bg {
+  fill: #000000 !important;
+}
+
+body.high-contrast .campus-inner-lot {
+  fill: #000000 !important;
+  stroke: #ffff00 !important;
+  stroke-width: 4 !important;
+}
+
+body.high-contrast * {
+  border-color: #ffff00 !important;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+code, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Route Animation Keyframes */
+@keyframes routeFlow {
+  from {
+    stroke-dashoffset: 48;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-route-flow {
+  animation: routeFlow 1.2s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+}
+
+.marker-pulse {
+  animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transform-origin: center;
+}
+
+/* Radar Scan Animation for Campus Digital Twin */
+@keyframes radarScan {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-beam {
+  animation: radarScan 4s linear infinite;
+  transform-origin: center;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .glass-panel {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Device Preview Simulator Frame */
+.device-frame-wrapper {
+  max-width: 430px;
+  height: 880px;
+  border-radius: 48px;
+  border: 12px solid #1e293b;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  background: var(--bg-surface);
+}
+
+.device-frame-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 28px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottom Sheet Transitions */
+.sheet-slide-up {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+/* Micro-interaction active feedback */
+button:active, .clickable:active {
+  transform: scale(0.97);
+}
+
+/* Compass HUD Dial */
+.compass-ring {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Joy University • 3D Smart Campus Navigation System</title>
+  <meta name="description" content="Professional Interactive 3D Campus Navigation Web Application for Joy University with accurate 3D buildings, road-only Dijkstra routing, turn-by-turn guidance, and landmark inspection.">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- 3D Stylesheet -->
+  <link rel="stylesheet" href="styles-3d.css">
+
+  <!-- Three.js & OrbitControls (Local offline with CDN fallback) -->
+  <script src="three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+  <script src="OrbitControls.js"></script>
+  <script>
+    if (typeof THREE.OrbitControls === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/script>');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- 3D WEBGL VIEWPORT CANVAS -->
+  <div id="viewport-container"></div>
+
+  <!-- TOP NAVIGATION TOOLBAR (Matching Reference Image 1) -->
+  <header class="top-navbar">
+    <!-- University Branding Card -->
+    <div class="brand-card">
+      <div class="brand-badge">JU</div>
+      <div class="brand-info">
+        <h1>
+          Joy University • 3D Smart Campus
+          <span class="live-dot" title="3D Digital Twin Live"></span>
+        </h1>
+        <p>Raja Nagar, Vadakangulam, Tirunelveli - 627116, Tamil Nadu</p>
+      </div>
+    </div>
+
+    <!-- Toolbar Action Buttons (Reference Image 1) -->
+    <div class="toolbar-actions">
+      <button id="btn-places" class="tool-btn active" title="Toggle Places Sidebar">
+        <i class="fa-solid fa-bars"></i> Places
+      </button>
+      <button id="btn-tour" class="tool-btn" title="Automated Guided Landmark Tour">
+        <i class="fa-solid fa-flag"></i> Tour
+      </button>
+      <button id="btn-orbit" class="tool-btn" title="Toggle 360° Continuous Orbit">
+        <i class="fa-solid fa-arrows-rotate"></i> Orbit
+      </button>
+      <button id="btn-top-view" class="tool-btn" title="2D Top-Down Aerial View">
+        <i class="fa-solid fa-compass"></i> Top
+      </button>
+      <button id="btn-reset" class="tool-btn" title="Reset Camera to Default 3D View">
+        <i class="fa-solid fa-rotate-left"></i> Reset
+      </button>
+      <button id="btn-night" class="tool-btn" title="Toggle Day / Night Lighting">
+        <i class="fa-solid fa-moon"></i> Night
+      </button>
+      <button id="btn-markers" class="tool-btn active" title="Toggle 3D Floating Labels">
+        <i class="fa-solid fa-location-dot"></i> Markers
+      </button>
+      <button id="btn-walk-route" class="tool-btn" title="A-to-B Walkway Navigation (Roads Only)">
+        <i class="fa-solid fa-person-walking"></i> Walk route
+      </button>
+      <button id="btn-share" class="tool-btn" title="Share Selected Location">
+        <i class="fa-solid fa-share-nodes"></i> Share
+      </button>
+      <button id="btn-snapshot" class="tool-btn" title="Download High-Res 3D Screenshot">
+        <i class="fa-solid fa-camera"></i> Snapshot
+      </button>
+      <button id="btn-fullscreen" class="tool-btn" title="Toggle Fullscreen Mode">
+        <i class="fa-solid fa-expand"></i> Fullscreen
+      </button>
+      <button id="btn-live-walk" class="tool-btn" title="Simulate Walking Avatar Along Road">
+        <i class="fa-solid fa-person-walking-arrow-right"></i> Live Walk
+      </button>
+      <button id="btn-profile" class="tool-btn" title="User Role Profile">
+        <i class="fa-solid fa-user"></i> Profile
+      </button>
+      <button id="btn-settings" class="tool-btn" title="Settings & Interior Cutaway">
+        <i class="fa-solid fa-gear"></i> Settings
+      </button>
+    </div>
+  </header>
+
+  <!-- LEFT PLACES SIDEBAR (Matching Reference Image 1) -->
+  <aside id="places-sidebar" class="places-sidebar">
+    <div class="sidebar-header-box">
+      <!-- Search Input Box -->
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input id="search-places-input" type="text" class="search-input" placeholder="Search block, hostel, sports, parking...">
+      </div>
+
+      <!-- Action Filter Tools (Voice, Favorites, Clear) -->
+      <div class="filter-tools">
+        <button id="btn-voice-search" class="filter-action-btn" title="Voice Search">
+          <i class="fa-solid fa-microphone"></i> Voice
+        </button>
+        <button id="btn-fav-filter" class="filter-action-btn" title="Filter Favorites">
+          <i class="fa-solid fa-star"></i> Favorites
+        </button>
+        <button id="btn-clear-search" class="filter-action-btn" title="Clear Search">
+          <i class="fa-solid fa-xmark"></i> Clear
+        </button>
+      </div>
+
+      <!-- Category Filter Pills (Reference Image 1: All, Blocks, Hostels, Sports, Services) -->
+      <div class="category-pills">
+        <button data-category="all" class="category-pill active">All</button>
+        <button data-category="blocks" class="category-pill">Blocks</button>
+        <button data-category="hostels" class="category-pill">Hostels</button>
+        <button data-category="sports" class="category-pill">Sports</button>
+        <button data-category="services" class="category-pill">Services</button>
+      </div>
+    </div>
+
+    <!-- Scrollable Places Cards List (Reference Image 1: 1. Administrative Block • Blocks • 145m) -->
+    <div id="places-list-container" class="places-scroll-container"></div>
+  </aside>
+
+  <!-- BUILDING DETAILS DRAWER / INSPECTOR (Right Bottom Float) -->
+  <div id="building-drawer" class="building-drawer hidden">
+    <div class="drawer-header">
+      <div>
+        <span id="drawer-category" class="drawer-category-pill">ACADEMIC BLOCK</span>
+        <h2 id="drawer-title" class="drawer-title">Administrative Block & COE</h2>
+        <div id="drawer-hours" class="drawer-hours">
+          <i class="fa-solid fa-clock"></i> 08:30 AM – 05:30 PM
+        </div>
+      </div>
+      <button id="btn-drawer-close" style="background:rgba(255,255,255,0.08); border:none; color:#ffffff; width:28px; height:28px; border-radius:50%; cursor:pointer;" title="Close Details">
+        ✕
+      </button>
+    </div>
+
+    <p id="drawer-desc" class="drawer-desc"></p>
+
+    <!-- Facilities Tags -->
+    <div>
+      <div style="font-size:10px; font-weight:700; color:#94a3b8; text-transform:uppercase; margin-bottom:5px;">Facilities & Amenities</div>
+      <div id="drawer-facilities" class="drawer-facilities"></div>
+    </div>
+
+    <!-- Interior Floor Directory -->
+    <div id="drawer-floors-list"></div>
+
+    <!-- Action Buttons -->
+    <div class="drawer-actions">
+      <button id="btn-drawer-navigate" class="btn-primary-nav">
+        <i class="fa-solid fa-diamond-turn-right"></i> Navigate To This Building
+      </button>
+      <div class="drawer-sub-buttons">
+        <button id="btn-drawer-cutaway" class="btn-sub-action">
+          <i class="fa-solid fa-cube"></i> Transparent Roof
+        </button>
+        <button class="btn-sub-action" onclick="window.campusApp.scene3d.resetView(); window.campusApp.closeBuildingDrawer();">
+          <i class="fa-solid fa-eye"></i> Campus View
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WALK ROUTE PLANNER DRAWER (Roads Only Navigation) -->
+  <div id="route-drawer" class="route-drawer hidden">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <h3 style="font-size:15px; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:6px;">
+        <i class="fa-solid fa-route" style="color:#38bdf8;"></i> Walk Route (Roads Only)
+      </h3>
+      <button id="btn-route-close" style="background:rgba(255,255,255,0.08); border:none; color:#ffffff; width:28px; height:28px; border-radius:50%; cursor:pointer;">
+        ✕
+      </button>
+    </div>
+
+    <!-- Origin & Destination Selector -->
+    <div class="route-selector-box">
+      <div class="selector-row">
+        <div class="selector-badge green">A</div>
+        <select id="select-origin" class="selector-dropdown"></select>
+      </div>
+      <div style="display:flex; justify-content:center; margin:-4px 0;">
+        <button id="btn-swap-route" style="background:rgba(255,255,255,0.1); border:none; color:#cbd5e1; width:24px; height:24px; border-radius:50%; cursor:pointer;" title="Swap Start & Destination">
+          ⇅
+        </button>
+      </div>
+      <div class="selector-row">
+        <div class="selector-badge blue">B</div>
+        <select id="select-destination" class="selector-dropdown"></select>
+      </div>
+    </div>
+
+    <!-- Metrics Summary Card -->
+    <div class="route-metrics-card">
+      <div>
+        <div id="metric-distance" class="metric-col-val">--</div>
+        <div class="metric-col-label">Distance</div>
+      </div>
+      <div>
+        <div id="metric-time" class="metric-col-val">--</div>
+        <div class="metric-col-label">Walk Time</div>
+      </div>
+      <div>
+        <div id="metric-steps" class="metric-col-val">--</div>
+        <div class="metric-col-label">Steps</div>
+      </div>
+      <div>
+        <div id="metric-calories" class="metric-col-val">--</div>
+        <div class="metric-col-label">Calories</div>
+      </div>
+    </div>
+
+    <!-- Start Live Walk Button -->
+    <button class="btn-primary-nav" onclick="window.campusApp.startLiveWalk()">
+      <i class="fa-solid fa-person-walking-arrow-right"></i> Start Live Walk Simulation
+    </button>
+
+    <!-- Turn-by-Turn Steps List -->
+    <div>
+      <div style="font-size:10px; font-weight:700; color:#94a3b8; text-transform:uppercase; margin-bottom:5px;">Road Guidance Steps</div>
+      <div id="route-steps-container" class="route-steps-scroll"></div>
+    </div>
+  </div>
+
+  <!-- TOUR HUD BANNER (Top Center Float) -->
+  <div id="hud-tour" class="hud-banner hidden">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span style="font-size:16px;">🚩</span>
+      <div>
+        <div style="font-size:9.5px; font-weight:800; color:#38bdf8; text-transform:uppercase;">Guided Campus Tour</div>
+        <div id="hud-tour-title" style="font-size:12px; font-weight:700; color:#ffffff;">Stop 1: Gate 1</div>
+      </div>
+    </div>
+    <button class="tool-btn danger" onclick="window.campusApp.scene3d.stopTour(); document.getElementById('hud-tour').classList.add('hidden'); document.getElementById('btn-tour').classList.remove('active');">
+      Exit Tour
+    </button>
+  </div>
+
+  <!-- LIVE WALK NAVIGATION HUD (Top Center Float) -->
+  <div id="hud-live-walk" class="hud-banner hidden">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span style="font-size:20px; animation:bounce 1.5s infinite;">🚶</span>
+      <div>
+        <div style="font-size:9px; font-weight:800; color:#10b981; text-transform:uppercase;">Road Walk Simulation Active</div>
+        <div id="hud-turn-text" style="font-size:12px; font-weight:700; color:#ffffff; max-width:280px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+          Follow illuminated road path...
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:6px;">
+      <button id="btn-hud-play" class="tool-btn" style="background:#10b981; color:#ffffff;">
+        <i class="fa-solid fa-pause"></i> Pause
+      </button>
+      <button id="btn-hud-speed" class="tool-btn" style="min-width:40px; text-align:center;">
+        1x
+      </button>
+      <button id="btn-hud-exit" class="tool-btn danger">
+        Exit
+      </button>
+    </div>
+  </div>
+
+  <!-- USER PROFILE MODAL -->
+  <div id="profile-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+        <h3 style="font-size:15px; font-weight:800; color:#ffffff;">User Role & Credentials</h3>
+        <button class="btn-close-modal" style="background:none; border:none; color:#94a3b8; font-size:16px; cursor:pointer;">✕</button>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; padding:12px; background:rgba(255,255,255,0.05); border-radius:16px; margin-bottom:14px;">
+        <div style="width:48px; height:48px; border-radius:50%; background:#0284c7; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:800; color:#ffffff;">
+          JU
+        </div>
+        <div>
+          <div style="font-size:13px; font-weight:800; color:#ffffff;">Campus Explorer</div>
+          <div style="font-size:11px; color:#38bdf8;">Student • Computer Science & AI</div>
+          <div style="font-size:9.5px; color:#94a3b8; margin-top:2px;">RFID: JU-2026-8849 • Level 1 Access</div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <button class="tool-btn active" onclick="window.campusApp.showToast('Role switched to Student'); document.getElementById('profile-modal').classList.add('hidden');">
+          Student Mode
+        </button>
+        <button class="tool-btn" onclick="window.campusApp.showToast('Role switched to Faculty/Staff'); document.getElementById('profile-modal').classList.add('hidden');">
+          Faculty Mode
+        </button>
+        <button class="tool-btn" onclick="window.campusApp.showToast('Role switched to Visitor'); document.getElementById('profile-modal').classList.add('hidden');">
+          Visitor Mode
+        </button>
+        <button class="tool-btn" onclick="window.campusApp.showToast('Role switched to Admin'); document.getElementById('profile-modal').classList.add('hidden');">
+          Admin Mode
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS MODAL -->
+  <div id="settings-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+        <h3 style="font-size:15px; font-weight:800; color:#ffffff;">3D Campus Settings</h3>
+        <button class="btn-close-modal" style="background:none; border:none; color:#94a3b8; font-size:16px; cursor:pointer;">✕</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:11.5px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <span>Transparent Roof (Interior Cutaway)</span>
+          <button class="tool-btn" onclick="window.campusApp.scene3d.toggleTransparentRoofs(); window.campusApp.showToast('Interior Cutaway Toggled');">
+            Toggle Cutaway
+          </button>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <span>3D Wind Turbines Animation</span>
+          <span style="color:#10b981; font-weight:700;">Active (Smooth 60fps)</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <span>Road Navigation Obstacle Engine</span>
+          <span style="color:#10b981; font-weight:700;">Strictly Roads Only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-notification">Notification Message</div>
+
+  <!-- Core App Scripts -->
+  <script src="campus-data-3d.js"></script>
+  <script src="router-3d.js"></script>
+  <script src="campus-3d-scene.js"></script>
+  <script src="app-3d.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Navigation - Smart Campus Navigation System</title>
+  <meta name="description" content="Smart campus navigation with GPS tracking, interactive campus map, shortest route navigation, and emergency contacts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CREATIVE CAMPUS LOGIN GATEWAY (FULLSCREEN SHOWCASE + CAMPUS LOGIN) -->
+  <div class="login-overlay-screen" id="loginScreen">
+    <!-- Ambient Dynamic Aura Background with Radar & Telemetry SVG -->
+    <div class="login-background-decorations">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+      <div class="grid-mesh"></div>
+      
+      <!-- The Big Two Waves: Dual Intertwining Waves with One Line Flowing Over Another -->
+      <svg class="telemetry-svg-backdrop" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Big Wave 1 Gradient Fill: Luminous Cyan/Sky/Blue Ocean Swell -->
+          <linearGradient id="bigWaveFill1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.32"/>
+            <stop offset="35%" stop-color="#00E5FF" stop-opacity="0.22"/>
+            <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#060B17" stop-opacity="0.02"/>
+          </linearGradient>
+
+          <!-- Big Wave 2 Gradient Fill: Sinuous Violet/Indigo/Purple Ocean Swell -->
+          <linearGradient id="bigWaveFill2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.28"/>
+            <stop offset="45%" stop-color="#A855F7" stop-opacity="0.18"/>
+            <stop offset="80%" stop-color="#4F46E5" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#020617" stop-opacity="0.02"/>
+          </linearGradient>
+
+          <!-- Big Wave 1 Glowing Spine Gradient (Cyan/Teal/Sky) -->
+          <linearGradient id="neonWaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.4"/>
+            <stop offset="30%" stop-color="#00E5FF" stop-opacity="0.95"/>
+            <stop offset="70%" stop-color="#38BDF8" stop-opacity="1.0"/>
+            <stop offset="100%" stop-color="#818CF8" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad1Sub1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.25"/>
+            <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.85"/>
+            <stop offset="85%" stop-color="#60A5FA" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.35"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad1Sub2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0369A1" stop-opacity="0.2"/>
+            <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.3"/>
+          </linearGradient>
+
+          <!-- Big Wave 2 Glowing Spine Gradient (Violet/Magenta/Purple - Weaving Over) -->
+          <linearGradient id="neonWaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" stop-opacity="0.4"/>
+            <stop offset="35%" stop-color="#A855F7" stop-opacity="0.95"/>
+            <stop offset="70%" stop-color="#EC4899" stop-opacity="1.0"/>
+            <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad2Sub1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.25"/>
+            <stop offset="45%" stop-color="#C084FC" stop-opacity="0.85"/>
+            <stop offset="85%" stop-color="#F472B6" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.35"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad2Sub2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#6366F1" stop-opacity="0.2"/>
+            <stop offset="50%" stop-color="#9333EA" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#E879F9" stop-opacity="0.3"/>
+          </linearGradient>
+
+          <!-- Glowing Cyber Neon Filter -->
+          <filter id="bigWaveDualGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4.5" result="glow1"/>
+            <feGaussianBlur stdDeviation="9" result="glow2"/>
+            <feMerge>
+              <feMergeNode in="glow2"/>
+              <feMergeNode in="glow1"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Ambient Concentric Radar Circles in bottom-left corner -->
+        <circle cx="120" cy="880" r="160" fill="none" stroke="rgba(56, 189, 248, 0.12)" stroke-width="1.2" stroke-dasharray="4 6"/>
+        <circle cx="120" cy="880" r="300" fill="none" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1"/>
+        <circle cx="120" cy="880" r="480" fill="none" stroke="rgba(56, 189, 248, 0.05)" stroke-width="1" stroke-dasharray="8 8"/>
+
+        <!-- 1. BIG WAVE 1: CYAN / AZURE OCEANIC SWELL & FLOWING LINES -->
+        <g class="big-waves-container wave-one-group">
+          <!-- Wave 1 Body Fill -->
+          <path class="big-wave-fill wave-one" d="M -100 680 C 320 450, 720 860, 1140 600 C 1480 390, 1750 720, 2050 500 L 2050 1200 L -100 1200 Z" fill="url(#bigWaveFill1)"/>
+          
+          <!-- Wave 1 Layered Harmonic Lines ("one line on another line") -->
+          <g class="wave-lines-layer" filter="url(#bigWaveDualGlow)">
+            <!-- Parallel offset line A (stacked 18px above) -->
+            <path class="big-wave-line wave-stream-primary-sub1" d="M -100 662 C 320 432, 720 842, 1140 582 C 1480 372, 1750 702, 2050 482" fill="none" stroke="url(#neonWaveGrad1Sub1)" stroke-width="2.2" stroke-dasharray="14 10"/>
+            
+            <!-- Main luminous spine line of Wave 1 -->
+            <path class="big-wave-line wave-stream-primary" d="M -100 680 C 320 450, 720 860, 1140 600 C 1480 390, 1750 720, 2050 500" fill="none" stroke="url(#neonWaveGrad1)" stroke-width="4.2" stroke-linecap="round"/>
+            
+            <!-- Parallel offset line B (stacked 20px below) -->
+            <path class="big-wave-line wave-stream-primary-sub2" d="M -100 700 C 320 470, 720 880, 1140 620 C 1480 410, 1750 740, 2050 520" fill="none" stroke="url(#neonWaveGrad1Sub2)" stroke-width="1.8" stroke-dasharray="10 14"/>
+          </g>
+        </g>
+
+        <!-- 2. BIG WAVE 2: VIOLET / PURPLE COUNTER-WAVE WEAVING OVER WAVE 1 ("ONE LINE GOING ON ANOTHER LINE") -->
+        <g class="big-waves-container wave-two-group">
+          <!-- Wave 2 Body Fill -->
+          <path class="big-wave-fill wave-two" d="M -100 460 C 340 760, 740 380, 1160 740 C 1480 880, 1720 360, 2050 640 L 2050 1200 L -100 1200 Z" fill="url(#bigWaveFill2)"/>
+          
+          <!-- Wave 2 Layered Harmonic Lines ("one line on another line") -->
+          <g class="wave-lines-layer" filter="url(#bigWaveDualGlow)">
+            <!-- Parallel offset line A (stacked 18px above) -->
+            <path class="big-wave-line wave-stream-secondary-sub1" d="M -100 442 C 340 742, 740 362, 1160 722 C 1480 862, 1720 342, 2050 622" fill="none" stroke="url(#neonWaveGrad2Sub1)" stroke-width="2.2" stroke-dasharray="16 12"/>
+            
+            <!-- Main luminous spine line of Wave 2 (flows directly on top of / across Wave 1) -->
+            <path class="big-wave-line wave-stream-secondary" d="M -100 460 C 340 760, 740 380, 1160 740 C 1480 880, 1720 360, 2050 640" fill="none" stroke="url(#neonWaveGrad2)" stroke-width="4.2" stroke-linecap="round"/>
+            
+            <!-- Parallel offset line B (stacked 20px below) -->
+            <path class="big-wave-line wave-stream-secondary-sub2" d="M -100 480 C 340 780, 740 400, 1160 760 C 1480 900, 1720 380, 2050 660" fill="none" stroke="url(#neonWaveGrad2Sub2)" stroke-width="1.8" stroke-dasharray="12 16"/>
+          </g>
+        </g>
+
+        <!-- 3. INTERTWINING CROSSING NODES (WHERE ONE LINE GOES ON ANOTHER LINE) -->
+        <g class="wave-crossing-beacons" filter="url(#bigWaveDualGlow)">
+          <!-- Crossing Intersection 1 (Left flank) -->
+          <g class="wave-crossing-node" transform="translate(200, 570)">
+            <circle class="wave-beacon-ring" r="8" fill="none" stroke="#00E5FF" stroke-width="2"/>
+            <circle class="wave-beacon-ring delayed" r="8" fill="none" stroke="#A855F7" stroke-width="1.5"/>
+            <circle r="4.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Crossing Intersection 2 (Center crest - Wave 2 sweeping over Wave 1) -->
+          <g class="wave-crossing-node" transform="translate(660, 620)">
+            <circle class="wave-beacon-ring" r="10" fill="none" stroke="#38BDF8" stroke-width="2"/>
+            <circle class="wave-beacon-ring delayed" r="10" fill="none" stroke="#EC4899" stroke-width="1.5"/>
+            <circle r="5" fill="#38BDF8"/>
+            <circle r="2.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Crossing Intersection 3 (Behind login card area) -->
+          <g class="wave-crossing-node" transform="translate(1340, 480)">
+            <circle class="wave-beacon-ring" r="14" fill="none" stroke="#00E5FF" stroke-width="2.2"/>
+            <circle class="wave-beacon-ring delayed" r="14" fill="none" stroke="#A855F7" stroke-width="1.8"/>
+            <circle r="6" fill="#00E5FF"/>
+            <circle r="3" fill="#FFFFFF"/>
+            <text x="20" y="5" fill="#00E5FF" font-size="11" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" letter-spacing="1">NAV-STREAM // CORRIDOR 01</text>
+          </g>
+
+          <!-- Far Right Crest Node -->
+          <g class="wave-crossing-node" transform="translate(1740, 340)">
+            <circle class="wave-beacon-ring" r="10" fill="none" stroke="#C084FC" stroke-width="2"/>
+            <circle r="5" fill="#EC4899"/>
+            <circle r="2" fill="#FFFFFF"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- MAIN DUAL-COLUMN CONTAINER (HERO TELEMETRY SHOWCASE + CAMPUS LOGIN) -->
+    <div class="login-layout-wrapper pos-right" id="loginLayoutWrapper">
+      
+      <!-- LEFT COLUMN: HERO & CAMPUS TELEMETRY SHOWCASE -->
+      <div class="login-hero-showcase" id="loginHeroShowcase">
+        <div class="hero-brand-top">
+          <span class="hero-badge-tag">SMART UNIVERSITY GUIDE</span>
+          <h1 class="hero-main-title">Campus Navigation</h1>
+          <h2 class="hero-tagline">Explore Every Corner of Campus Effortlessly.</h2>
+          <p class="hero-description">
+            Turn-by-turn indoor &amp; outdoor wayfinding, live shuttle telemetry, shortest accessible paths, and real-time facility search for the entire university community.
+          </p>
+        </div>
+
+        <!-- 3 LIVE TELEMETRY CARDS -->
+        <div class="telemetry-cards-row">
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon cyan">
+              <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">GPS SATELLITE MESH</span>
+              <strong class="telemetry-chip-val">
+                <span class="live-dot-green"></span> Live • ±0.8m Accuracy
+              </strong>
+            </div>
+          </div>
+
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon blue">
+              <i class="fa-solid fa-van-shuttle"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">CAMPUS SHUTTLES</span>
+              <strong class="telemetry-chip-val">
+                2 Active Fleets En Route
+              </strong>
+            </div>
+          </div>
+
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon teal">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">CAMPUS WEATHER</span>
+              <strong class="telemetry-chip-val">
+                24°C • Optimal Air (38 AQI)
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVE WAYFINDING PATH CARD -->
+        <div class="active-wayfinding-preview">
+          <div class="awp-header">
+            <div class="awp-title">
+              <i class="fa-solid fa-diamond awp-diamond"></i>
+              <span>Active Wayfinding</span>
+            </div>
+            <div class="awp-time">
+              <i class="fa-regular fa-clock"></i>
+              <span>3 min walk (250m)</span>
+            </div>
+          </div>
+          <div class="awp-route-track">
+            <div class="awp-node green">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Main Gate 1 Entrance</span>
+            </div>
+            <div class="awp-dash"></div>
+            <div class="awp-node blue">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Admin Plaza</span>
+            </div>
+            <div class="awp-dash"></div>
+            <div class="awp-node yellow">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Tech &amp; AI Complex</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK FEATURE PILL BUTTONS -->
+        <div class="hero-quick-tags">
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-route"></i> Shortest Path Finder
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-wheelchair"></i> Barrier-Free Routes
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-chalkboard-user"></i> Lecture Hall Locator
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-tower-broadcast"></i> Real-time Fleet Tracking
+          </button>
+        </div>
+
+        <!-- BOTTOM HUD RADAR & ENTRY WAYPOINT -->
+        <div class="hero-bottom-hud">
+          <div class="hud-compass-dial">
+            <div class="hud-compass-ring">
+              <div class="hud-compass-sweep"></div>
+              <div class="hud-needle"></div>
+              <span class="hud-cardinal n">N</span>
+              <span class="hud-cardinal s">S</span>
+              <span class="hud-cardinal e">E</span>
+              <span class="hud-cardinal w">W</span>
+            </div>
+          </div>
+          <div class="hud-waypoint-badge">
+            <span class="hud-waypoint-dot"></span>
+            <strong>Main Gate 1 • Entry</strong>
+          </div>
+          <div class="hud-flow-line">
+            <span class="hud-hub-node">Student Hub</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: CAMPUS LOGIN CARD -->
+      <div class="creative-login-card" id="creativeLoginCard">
+        <!-- Soft subtle ambient backdrop glow (does not dominate sign in page) -->
+        <div class="sign-card-subtle-glow" aria-hidden="true"></div>
+
+        <!-- CARD HEADER & LOGOUT ACTION -->
+        <div class="clg-header">
+          <div class="clg-title-block">
+            <h2 class="clg-title">Campus Navigation</h2>
+            <span class="clg-univ-sub">Joy University</span>
+          </div>
+          <button type="button" class="clg-header-logout-btn" id="btnLoginHeaderLogout" onclick="handleLogout()" title="Logout &amp; Reset Session">
+            <i class="fa-solid fa-power-off"></i>
+            <span>Logout &amp; Reset</span>
+          </button>
+        </div>
+
+        <!-- 4 DISTINCT LOGIN MODULES (STUDENT, STAFF, VISITOR, ADMIN) -->
+        <div class="clg-modules-wrapper">
+          <span class="clg-modules-heading">LOGIN AS:</span>
+          <div class="clg-modules-grid" id="loginRoleTabs">
+            <!-- 1: Student -->
+            <button type="button" class="clg-module-card active" id="moduleBtnStudent" data-role="student" onclick="selectLoginRole('student')">
+              <div class="clg-module-icon student">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Student</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 2: Staff -->
+            <button type="button" class="clg-module-card" id="moduleBtnStaff" data-role="staff" onclick="selectLoginRole('staff')">
+              <div class="clg-module-icon staff">
+                <i class="fa-solid fa-id-badge"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Staff</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 3: Visitor -->
+            <button type="button" class="clg-module-card" id="moduleBtnVisitor" data-role="visitor" onclick="selectLoginRole('visitor')">
+              <div class="clg-module-icon visitor">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Visitor</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 4: Admin -->
+            <button type="button" class="clg-module-card" id="moduleBtnAdmin" data-role="admin" onclick="selectLoginRole('admin')">
+              <div class="clg-module-icon admin">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Admin</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- AUTHENTICATION FORM -->
+        <form class="clg-auth-form" id="unifiedLoginForm" onsubmit="event.preventDefault(); handleUnifiedLoginSubmit();">
+          <!-- Name Input -->
+          <div class="clg-field-group">
+            <label for="loginNameInput" id="labelLoginName" class="clg-field-label">Student Name</label>
+            <div class="clg-input-wrapper">
+              <i class="fa-regular fa-user clg-input-prefix" id="iconLoginName"></i>
+              <input type="text" id="loginNameInput" class="clg-input-field" placeholder="Enter student full name" autocomplete="off" required value="" oninput="handleLoginNameInput(this.value)">
+            </div>
+          </div>
+
+          <!-- Password / ID Input -->
+          <div class="clg-field-group" id="clgPasswordGroup">
+            <label for="loginPasswordInput" id="labelLoginPass" class="clg-field-label">Password</label>
+            <div class="clg-input-wrapper">
+              <i class="fa-solid fa-lock clg-input-prefix" id="iconLoginPass"></i>
+              <input type="password" id="loginPasswordInput" class="clg-input-field" placeholder="Enter password" autocomplete="off" required value="">
+              <button type="button" class="clg-toggle-pw-btn" onclick="togglePasswordVisibility('loginPasswordInput')" title="Show / Hide Password">
+                <i class="fa-regular fa-eye" id="pwEyeIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Admin Demo Autofill Helper -->
+          <div class="clg-admin-hint" id="adminAutofillHint" style="display:none;" onclick="autofillAdminCredentials()">
+            <i class="fa-solid fa-key"></i> Demo Admin: <strong>suma</strong> | PIN: <strong>581200</strong> <span style="text-decoration:underline; font-weight:700; margin-left:4px;">(Click to Autofill)</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="clg-submit-action-btn" id="btnLoginSubmit">
+            <span id="btnSubmitText">Sign in</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <!-- Direct Guest Map Explorer Button -->
+          <button type="button" class="clg-guest-direct-btn" onclick="enterAsGuest()" style="margin-top: 10px; width: 100%; padding: 11px; border-radius: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38BDF8; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.9rem; transition: all 0.2s ease;">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Explore Campus Map Directly</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN APP CONTAINER (3-COLUMN EXACT SCREENSHOT LAYOUT) -->
+  <div class="app-layout" id="appLayout">
+
+    <!-- 1. LEFT SIDEBAR (DARK NAVY) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo-wrap">
+          <div class="brand-square-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="brand-titles">
+            <h2 class="brand-title">Campus Navigation</h2>
+            <span class="brand-sub">Smart University Guide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-scroll-content">
+        <!-- MAIN NAVIGATION -->
+        <div class="nav-section-label">MAIN NAVIGATION</div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-view="dashboard" id="navDashboard">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Campus Dashboard</span>
+          </button>
+          <button class="nav-item" data-view="map" id="navMap">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Interactive Map</span>
+            <span class="nav-pill cyan">Live</span>
+          </button>
+          <button class="nav-item" data-view="route" id="navRoute">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>Route Finder</span>
+          </button>
+          <button class="nav-item" id="navSavedPlaces" onclick="openSavedPlacesModal()">
+            <i class="fa-solid fa-star text-amber"></i>
+            <span>Saved Places</span>
+            <span class="nav-pill amber" id="sidebarSavedBadge">3 Saved</span>
+          </button>
+          <button class="nav-item" id="navWebBrowser" onclick="openCampusBrowser()">
+            <i class="fa-solid fa-globe text-primary"></i>
+            <span>Campus Web Browser</span>
+            <span class="nav-pill cyan">Portal</span>
+          </button>
+          <button class="nav-item" id="navShuttle" onclick="openShuttleModal()">
+            <i class="fa-solid fa-van-shuttle text-green"></i>
+            <span>Shuttle &amp; Weather GPS</span>
+            <span class="nav-pill green">Live</span>
+          </button>
+        </nav>
+
+        <!-- EMERGENCY & SMART TOOLS -->
+        <div class="nav-section-label">QUICK TOOLS</div>
+        <nav class="sidebar-nav">
+          <button class="nav-item emergency-item" id="navEmergency" onclick="triggerEmergencyNavigation('loc-health')">
+            <i class="fa-solid fa-truck-medical text-red"></i>
+            <span>Emergency Services</span>
+            <span class="nav-pill red">24/7 SOS</span>
+          </button>
+          <button class="nav-item" id="navPrompts" onclick="document.getElementById('announcementBanner') ? (document.getElementById('announcementBanner').scrollIntoView({behavior:'smooth'}), showToast('Active Campus Prompt: ' + document.getElementById('bannerNoticeText').textContent, 'info')) : showToast('Community Health Centre & Legal Aid Clinic active 24/7. Hotline Ext. 911 / 108.', 'info')">
+            <i class="fa-solid fa-bullhorn text-amber"></i>
+            <span>Campus Prompts &amp; Alerts</span>
+            <span class="nav-pill amber">Live</span>
+          </button>
+          <button class="nav-item admin-tool-item hidden" id="navDeclareNotif" onclick="openDeclareNotificationModal()">
+            <i class="fa-solid fa-bullhorn text-amber"></i>
+            <span>Declare Notification</span>
+            <span class="nav-pill amber">All Loginers</span>
+          </button>
+          <button class="nav-item admin-tool-item hidden" id="navAddBlock" onclick="openAdminAddBlockModal()">
+            <i class="fa-solid fa-square-plus text-amber"></i>
+            <span>Add Campus Block</span>
+            <span class="nav-pill amber">Admin</span>
+          </button>
+        </nav>
+
+        <!-- CAMPUS STATUS CARD -->
+        <div class="sidebar-status-card" id="sidebarStatusCard">
+          <div class="status-indicator-row">
+            <span class="status-dot green" id="sidebarStatusDot"></span>
+            <strong id="sidebarStatusTitle">Campus Status: Open</strong>
+          </div>
+          <p class="status-subtext" id="sidebarStatusSub">Gates 1–5 Active • Shuttle Running • Emergency Dispatch 24/7</p>
+        </div>
+      </div>
+
+      <!-- USER PROFILE FOOTER -->
+      <div class="sidebar-user-footer">
+        <div class="user-avatar-circle" id="sidebarUserAvatar">
+          <i class="fa-solid fa-user-graduate"></i>
+        </div>
+        <div class="user-details-text" onclick="handleLogout()" style="cursor:pointer;" title="Click to switch user or sign out">
+          <strong class="user-name-display" id="sidebarUserName">Alex Rivera</strong>
+          <span class="user-role-display" id="sidebarUserRole">Student • Year 4</span>
+        </div>
+        <button class="btn-sidebar-logout" id="btnSidebarLogout" onclick="handleLogout()" title="Switch Account / Sign Out">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- 2. MAIN WORKSPACE WRAPPER (TOP BAR + NOTICE + 2 COLUMNS) -->
+    <div class="main-wrapper" id="mainWrapper">
+
+      <!-- TOP HEADER BAR -->
+      <header class="app-header" id="appHeader">
+        <div class="header-left">
+          <button class="header-menu-btn" id="btnSidebarToggle" title="Toggle Sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="header-branding">
+            <div class="header-title-row">
+              <h1 class="header-app-name">Campus <span class="brand-accent">Navigation</span></h1>
+              <span class="header-tag-pill"><i class="fa-solid fa-compass"></i> Interactive Guide</span>
+            </div>
+            <p class="header-tagline">Explore buildings, departments, facilities &amp; navigate shortest routes</p>
+          </div>
+        </div>
+
+        <!-- GLOBAL SEARCH BAR -->
+        <div class="header-search-wrap">
+          <div class="header-search-box" id="headerSearchBox">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="globalSearchInput" class="header-search-input" placeholder="Search buildings, classrooms, labs, departments..." autocomplete="off">
+            <button class="header-search-clear hidden" id="btnClearSearch"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- SEARCH DROPDOWN -->
+          <div class="search-dropdown hidden" id="searchDropdown">
+            <div class="search-quick-pills" id="searchSuggestionsList">
+              <div class="suggestions-label">Popular Searches:</div>
+              <div class="pills-container">
+                <span class="search-pill" data-target="Admin COE">Admin COE</span>
+                <span class="search-pill" data-target="Intel JOE E-Learning">Intel JOE</span>
+                <span class="search-pill" data-target="SAC Student Activity Centre">SAC</span>
+                <span class="search-pill" data-target="Conventional Hall Auditorium">Auditorium</span>
+                <span class="search-pill" data-target="ARUL MESS">ARUL Canteen</span>
+                <span class="search-pill" data-target="Technology Block Labs">Civil Lab</span>
+              </div>
+            </div>
+            <div class="search-results-list" id="searchResultsList"></div>
+          </div>
+        </div>
+
+        <!-- HEADER RIGHT ACTIONS -->
+        <div class="header-right-actions">
+          <button class="header-action-btn voice-guide-btn muted" id="btnHeaderVoice" onclick="toggleVoiceGuidance()" title="Toggle Turn-by-Turn Voice Audio Guidance (Muted)">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <button class="header-action-btn notif-btn" id="btnNotification" title="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button class="header-action-btn" id="btnToggleTheme" title="Toggle Theme">
+            <i class="fa-regular fa-moon"></i>
+          </button>
+          <button class="header-action-btn" id="btnHeaderLoginGateway" onclick="openLoginGateway()" title="Open Campus Login Gateway" style="background: rgba(2, 132, 199, 0.15); border: 1px solid rgba(2, 132, 199, 0.4); color: #38BDF8; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Login Portal</span>
+          </button>
+          <button class="header-action-btn logout-header-btn" id="btnHeaderLogout" onclick="handleLogout()" title="Log Out of Campus System">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- CAMPUS NOTICE BANNER -->
+      <div class="campus-notice-bar" id="announcementBanner">
+        <div class="notice-content-wrap">
+          <span class="notice-badge"><i class="fa-solid fa-bullhorn"></i> CAMPUS NOTICE</span>
+          <span class="notice-text" id="bannerNoticeText">Community Health Centre &amp; Legal Aid Clinic active 24/7. Emergency SOS hotline Ext. 911 / 108.</span>
+        </div>
+        <button class="notice-close-btn" id="btnCloseBanner"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- MAIN CONTENT GRID (CENTER MAP + RIGHT PANEL) -->
+      <div class="content-grid" id="contentGrid">
+
+        <!-- CENTER COLUMN: INTERACTIVE MAP -->
+        <section class="center-map-column" id="centerMapColumn">
+          <!-- CATEGORY FILTERS BAR -->
+          <div class="map-category-strip" id="mapFilters">
+            <button class="filter-pill active" data-filter="all"><i class="fa-solid fa-border-all"></i> All</button>
+            <button class="filter-pill" data-filter="academic"><i class="fa-solid fa-graduation-cap"></i> Academic</button>
+            <button class="filter-pill" data-filter="amenities"><i class="fa-solid fa-utensils"></i> Dining &amp; Mess</button>
+            <button class="filter-pill" data-filter="restrooms"><i class="fa-solid fa-restroom"></i> Restrooms</button>
+            <button class="filter-pill" data-filter="water"><i class="fa-solid fa-glass-water"></i> RO Water</button>
+            <button class="filter-pill" data-filter="parking"><i class="fa-solid fa-square-parking"></i> Parking</button>
+            <button class="filter-pill" data-filter="emergency"><i class="fa-solid fa-truck-medical"></i> Health &amp; SOS</button>
+            <button class="filter-pill" data-filter="gates"><i class="fa-solid fa-door-open"></i> Gates</button>
+          </div>
+
+
+
+          <!-- MAP VIEWPORT -->
+          <div class="map-viewport" id="mapViewport">
+            <!-- INTERACTIVE MAP PLACEMENT / COORDINATE PICKER HUD -->
+            <div class="map-coord-picker-hud hidden" id="mapCoordPickerHud">
+              <div class="hud-pill">
+                <i class="fa-solid fa-crosshairs text-amber"></i>
+                <span><strong>Map Placement Mode:</strong> Click anywhere on the campus canvas to set block coordinates</span>
+                <button type="button" class="btn-cancel-pick" onclick="cancelMapCoordinatePicker()">Cancel</button>
+              </div>
+            </div>
+
+            <div class="svg-map-wrapper" id="svgMapWrapper">
+              <svg id="campusSvg" viewBox="0 0 1024 815" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="pinShadow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.55" flood-color="#000000"/>
+                  </filter>
+                </defs>
+
+                <!-- 1. The Exact 3D Campus Blueprint Image (Untouched) -->
+                <g id="blueprintImageLayer">
+                  <image id="campusBlueprintImg" href="campus_3d_blueprint.jpg" x="0" y="0" width="1024" height="815" preserveAspectRatio="xMidYMid meet"/>
+                </g>
+
+                <!-- 2. Blueprint Architectural Grid & Cartographic Coordinate HUD -->
+                <g id="blueprintCartoLayer" pointer-events="none">
+                  <!-- Subtle blueprint border -->
+                  <rect x="0" y="0" width="1024" height="815" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5"/>
+                  <rect x="10" y="10" width="1004" height="795" fill="none" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1"/>
+
+                  <!-- Architectural Title Block in top-right -->
+                  <g transform="translate(730, 18)" class="blueprint-stamp">
+                    <rect x="0" y="0" width="225" height="34" rx="4" fill="rgba(8, 16, 32, 0.88)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.2"/>
+                    <text x="10" y="14" font-family="'Fira Code', monospace" font-size="8" font-weight="700" fill="#38BDF8">CAMPUS BLUEPRINT MAP</text>
+                    <text x="10" y="26" font-family="'Fira Code', monospace" font-size="6.5" fill="#94A3B8">JOY UNIVERSITY · CAMPUS MAP</text>
+                  </g>
+
+                  <!-- Compass Rose in upper right -->
+                  <g transform="translate(975, 35)" class="blueprint-compass">
+                    <circle cx="0" cy="0" r="15" fill="rgba(8, 16, 32, 0.85)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1"/>
+                    <polygon points="0,-11 3,0 -3,0" fill="#EF4444"/>
+                    <polygon points="0,11 3,0 -3,0" fill="#94A3B8"/>
+                    <text x="0" y="-13" text-anchor="middle" font-family="'Fira Code', monospace" font-size="6.5" font-weight="800" fill="#EF4444">N</text>
+                  </g>
+                </g>
+
+                <!-- 3. Walkways Graph Network (Paths / Roads) -->
+                <g id="walkwayNetwork"></g>
+
+                <!-- 4. Interactive Building Hotspots (Transparent clickable zones) -->
+                <g id="buildingsLayer"></g>
+
+                <!-- 5. Dynamic Custom Campus Blocks Added By Admin -->
+                <g id="customBlocksLayer"></g>
+
+                <!-- 6. Active Dynamic Navigation Route (Neon route line + A/B markers) -->
+                <g id="activeRouteLayer"></g>
+
+                <!-- 7. Interactive Location Markers / Badges -->
+                <g id="markersLayer"></g>
+
+                <!-- 8. Autonomous Campus Shuttle Live Route Layer -->
+                <g id="shuttleBusLayer" class="hidden"></g>
+
+                <!-- 9. Live GPS User Pulse -->
+                <g id="userPulseLayer"></g>
+
+                <!-- 10. Pedestrian Routing Debug Overlay (Obstacles, Walkway Graph & Entrances) -->
+                <g id="routingDebugLayer" style="display: none;" pointer-events="none"></g>
+              </svg>
+            </div>
+
+            <!-- FLOATING MAP VIEW CONTROLS -->
+            <div class="map-floating-controls">
+              <button class="map-ctrl-btn" id="btnZoomIn" title="Zoom In"><i class="fa-solid fa-plus"></i></button>
+              <button class="map-ctrl-btn" id="btnZoomOut" title="Zoom Out"><i class="fa-solid fa-minus"></i></button>
+              <button class="map-ctrl-btn" id="btnResetMap" title="Reset Compass View"><i class="fa-solid fa-compass"></i></button>
+              <button class="map-ctrl-btn" id="btnLocateUser" title="Locate My Position"><i class="fa-solid fa-crosshairs"></i></button>
+              <button class="map-ctrl-btn" id="btnToggleShuttle" onclick="toggleLiveShuttleRoute()" title="Toggle Autonomous Shuttle Tracker"><i class="fa-solid fa-van-shuttle text-cyan"></i></button>
+              <button class="map-ctrl-btn" id="btnToggleDebugRouting" onclick="toggleRoutingDebugMode()" title="Toggle Pedestrian Routing Debug View (Walkways &amp; Obstacles)"><i class="fa-solid fa-draw-polygon"></i></button>
+            </div>
+
+            <!-- BOTTOM MAP LEGEND STRIP -->
+            <div class="map-bottom-legend">
+              <div class="legend-item"><span class="legend-dot academic"></span><span>Academic / Depts</span></div>
+              <div class="legend-item"><span class="legend-dot mess"></span><span>Mess &amp; Living</span></div>
+              <div class="legend-item"><span class="legend-dot health"></span><span>Health / Aid</span></div>
+              <div class="legend-item"><span class="legend-dot location"></span><span>Current Location</span></div>
+            </div>
+
+            <!-- HOVER CARD -->
+            <div class="map-hover-card hidden" id="mapHoverCard">
+              <div class="mhc-header">
+                <div class="mhc-icon-badge" id="mhcIconBadge"><i class="fa-solid fa-building"></i></div>
+                <div>
+                  <span class="mhc-cat" id="mhcCategory">Academic</span>
+                  <h4 class="mhc-title" id="mhcTitle">Building Name</h4>
+                </div>
+              </div>
+              <p class="mhc-desc" id="mhcDesc">Brief description</p>
+              <div class="mhc-footer">
+                <span class="mhc-distance" id="mhcDistance"><i class="fa-solid fa-person-walking"></i> 250 m</span>
+                <div class="mhc-btn-group">
+                  <button class="mhc-btn" id="btnMhcDetails"><i class="fa-solid fa-circle-info"></i> Details</button>
+                  <button class="mhc-btn primary" id="btnMhcNav"><i class="fa-solid fa-diamond-turn-right"></i> Route</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT COLUMN: ROUTE FINDER & TURN-BY-TURN GUIDANCE -->
+        <aside class="right-nav-panel" id="rightNavPanel">
+          <!-- ROUTE MODE STRIP -->
+          <div class="route-mode-strip" id="routeModeSelector">
+            <button class="mode-tab active" data-mode="fastest">Fastest</button>
+            <button class="mode-tab" data-mode="accessible">Accessible</button>
+            <button class="mode-tab" data-mode="safe">Safe Route</button>
+            <button class="mode-tab" data-mode="eco">Eco Path</button>
+          </div>
+
+          <!-- INPUTS BOX -->
+          <div class="route-inputs-card">
+            <div class="route-input-group origin-group">
+              <div class="input-point-indicator origin"></div>
+              <div class="input-select-wrap">
+                <label for="routeOriginSelect" class="input-field-label">FROM (Starting Point):</label>
+                <select id="routeOriginSelect" class="route-select-field"></select>
+              </div>
+              <button class="btn-swap-points" id="btnSwapPoints" title="Swap Origin and Destination">
+                <i class="fa-solid fa-arrow-up-arrow-down"></i>
+              </button>
+            </div>
+
+            <!-- INTERMEDIATE VIA-STOP GROUP (OPTIONAL MULTI-STOP) -->
+            <div class="route-input-group via-group hidden" id="routeViaGroup">
+              <div class="input-point-indicator via"><i class="fa-solid fa-diamond"></i></div>
+              <div class="input-select-wrap">
+                <label for="routeViaSelect" class="input-field-label">VIA (Intermediate Stop):</label>
+                <select id="routeViaSelect" class="route-select-field"></select>
+              </div>
+              <button class="btn-remove-via" id="btnRemoveVia" onclick="removeViaStop()" title="Remove Intermediate Stop">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="route-input-group dest-group">
+              <div class="input-point-indicator dest"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="input-select-wrap">
+                <label for="routeDestSelect" class="input-field-label">TO (Destination):</label>
+                <select id="routeDestSelect" class="route-select-field"></select>
+              </div>
+            </div>
+
+            <!-- AUX ROUTING TOOLS BAR -->
+            <div class="route-aux-strip">
+              <button type="button" class="btn-aux-pill" id="btnRouteMySpot" onclick="setOriginToCurrentLocation()" title="Start from My GPS Location">
+                <i class="fa-solid fa-crosshairs text-green"></i> <span>From My Spot</span>
+              </button>
+              <button type="button" class="btn-aux-pill" id="btnAddViaBtn" onclick="toggleViaWaypoint()">
+                <i class="fa-solid fa-plus text-primary"></i> <span>Add Via Stop</span>
+              </button>
+              <button type="button" class="btn-aux-pill" id="btnRouteVoiceToggle" onclick="toggleVoiceGuidance()">
+                <i class="fa-solid fa-volume-high text-cyan"></i> <span id="routeVoiceLabel">Voice: ON</span>
+              </button>
+            </div>
+
+            <!-- FIND OPTIMAL ROUTE BUTTON -->
+            <button class="btn-find-route" id="btnCalculateRoute">
+              <i class="fa-solid fa-route"></i>
+              <span>Find Optimal Route</span>
+            </button>
+          </div>
+
+          <!-- ROUTE FOUND SUMMARY CARD -->
+          <div class="route-result-card" id="routeSummaryCard">
+            <div class="route-status-header">
+              <div class="route-status-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Route Found</span>
+              </div>
+              <span class="route-type-tag" id="summaryRouteType">Fastest Direct Walk</span>
+            </div>
+
+            <!-- METRICS ROW (DISTANCE, TIME, STEPS) -->
+            <div class="route-metrics-grid">
+              <div class="metric-box">
+                <i class="fa-solid fa-person-walking metric-icon"></i>
+                <strong class="metric-val" id="summaryDistance">1035 m</strong>
+                <span class="metric-lbl">Distance</span>
+              </div>
+              <div class="metric-box">
+                <i class="fa-regular fa-clock metric-icon"></i>
+                <strong class="metric-val" id="summaryDuration">14 min walk</strong>
+                <span class="metric-lbl">Est. Time</span>
+              </div>
+              <div class="metric-box">
+                <i class="fa-solid fa-shoe-prints metric-icon"></i>
+                <strong class="metric-val" id="statSteps">~1346 steps</strong>
+                <span class="metric-lbl">Steps</span>
+              </div>
+            </div>
+
+            <!-- ROUTE HEADLINE -->
+            <div class="route-headline-text" id="routeHeadline">
+              GATE 3 (East Gate) &rarr; Central Walkways &rarr; Campus Monument Arch
+            </div>
+
+            <!-- TURN-BY-TURN DIRECTIONS LIST -->
+            <div class="turn-by-turn-box">
+              <div class="tbt-header">
+                <h4><i class="fa-solid fa-list-check"></i> Turn-by-Turn Directions</h4>
+                <span class="steps-badge" id="tbtStepsCount">5 Steps</span>
+              </div>
+              <div class="tbt-steps-list" id="turnByTurnList"></div>
+            </div>
+
+            <!-- BOTTOM ACTIONS -->
+            <div class="route-bottom-actions">
+              <button class="btn-sim-walk" id="btnSimulateWalk">
+                <i class="fa-solid fa-play"></i> Simulate Walk
+              </button>
+              <button class="btn-share-pass" id="btnShareRouteDirections" onclick="shareCurrentRouteDirections()">
+                <i class="fa-solid fa-share-nodes"></i> Share Route
+              </button>
+              <button class="btn-clear-route" id="btnClearActiveRoute">
+                <i class="fa-solid fa-xmark"></i> Clear
+              </button>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIVE NAV HUD -->
+  <div class="gmap-live-nav-banner hidden" id="liveNavHud">
+    <div class="gmap-nav-maneuver-icon" id="hudTurnIcon"><i class="fa-solid fa-arrow-turn-down fa-rotate-270"></i></div>
+    <div class="gmap-nav-guidance-content">
+      <div class="gmap-nav-dist-row">
+        <span class="gmap-nav-next-dist" id="hudNextDist">45 m</span>
+        <span class="gmap-nav-mode-tag" id="hudModeTag">Walk</span>
+      </div>
+      <div class="gmap-nav-instruction" id="hudInstructionText">Turn right onto Central Quadrangle</div>
+      <div class="gmap-nav-next-step" id="hudNextHint">Then continue toward Intel JOE</div>
+    </div>
+    <div class="gmap-nav-banner-actions">
+      <button class="gmap-nav-banner-btn muted" id="btnHudVoice"><i class="fa-solid fa-volume-xmark"></i></button>
+      <button class="gmap-nav-banner-btn exit" id="btnHudExit"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <!-- LOCATION DRAWER (WITH CLEAR BLOCK PICTURE & ADMIN EDIT) -->
+  <div class="location-drawer-backdrop hidden" id="locationDrawerBackdrop">
+    <div class="location-drawer" id="locationDrawer">
+      <button class="drawer-close-btn" id="btnCloseDrawer">&times;</button>
+      
+      <!-- HERO BLOCK PICTURE BANNER -->
+      <div class="drawer-hero-image" id="drawerHeroBg">
+        <div class="drawer-hero-img-wrap" id="drawerHeroImgWrap"></div>
+        <div class="drawer-hero-overlay"></div>
+        <div class="drawer-hero-top-bar">
+          <span class="drawer-category-badge" id="drawerCategory">Academic Block</span>
+          <span class="drawer-status-badge" id="drawerStatusBadge"><i class="fa-solid fa-circle"></i> OPEN NOW</span>
+        </div>
+        <div class="drawer-hero-content">
+          <h2 class="drawer-building-name" id="drawerName">Admin COE Block</h2>
+          <span class="drawer-building-code" id="drawerCode">Building 01 • Central Campus</span>
+        </div>
+      </div>
+
+      <div class="drawer-body">
+        <!-- BLOCK PHOTO GALLERY PREVIEWS -->
+        <div class="drawer-section gallery-section">
+          <div class="gallery-title-row">
+            <h4 class="drawer-section-title"><i class="fa-solid fa-images"></i> Block Pictures &amp; Architecture</h4>
+            <span class="small-hint">High-Resolution Views</span>
+          </div>
+          <div class="drawer-photo-strip" id="drawerPhotoStrip">
+            <div class="photo-thumb-card active" id="thumbExterior">
+              <div class="thumb-img-box" id="thumbExteriorImg"></div>
+              <span>Exterior Front</span>
+            </div>
+            <div class="photo-thumb-card" id="thumbLobby">
+              <div class="thumb-img-box" id="thumbLobbyImg"></div>
+              <span>Main Foyer</span>
+            </div>
+            <div class="photo-thumb-card" id="thumbPlan">
+              <div class="thumb-img-box" id="thumbPlanImg"></div>
+              <span>Blueprint Plan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer-stats-ribbon">
+          <div class="ribbon-item"><i class="fa-regular fa-clock"></i><div><strong id="drawerHours">08:00 AM - 06:00 PM</strong><span>Operating Hours</span></div></div>
+          <div class="ribbon-item"><i class="fa-solid fa-person-walking"></i><div><strong id="drawerDistance">280 m (4 mins)</strong><span>From Your Spot</span></div></div>
+          <div class="ribbon-item"><i class="fa-solid fa-phone"></i><div><strong id="drawerContact">Ext. 2000</strong><span>Main Extension</span></div></div>
+        </div>
+        
+        <div class="drawer-section">
+          <h4 class="drawer-section-title"><i class="fa-solid fa-circle-info"></i> About this Building</h4>
+          <p class="drawer-description-text" id="drawerDescription">Central Administrative Complex and Controller of Examinations.</p>
+        </div>
+        
+        <div class="drawer-section">
+          <h4 class="drawer-section-title"><i class="fa-solid fa-boxes-stacked"></i> Available Facilities</h4>
+          <div class="facilities-tags-wrap" id="drawerFacilities"></div>
+        </div>
+        
+        <div class="drawer-section">
+          <div class="section-title-with-extra">
+            <h4 class="drawer-section-title"><i class="fa-solid fa-stairs"></i> Floor and Room Directory</h4>
+            <span class="small-hint">Wheelchair Access Available</span>
+          </div>
+          <div class="floor-accordion" id="drawerFloorList"></div>
+        </div>
+        
+        <div class="drawer-actions">
+          <button class="btn-drawer-primary" id="btnDrawerNavigate"><i class="fa-solid fa-diamond-turn-right"></i><span>Navigate Here</span></button>
+          <button class="btn-drawer-share" id="btnDrawerShare" onclick="shareCurrentLocationDrawer()"><i class="fa-solid fa-share-nodes"></i><span>Share Pin</span></button>
+          <button class="btn-drawer-secondary" id="btnDrawerSetStart"><i class="fa-solid fa-location-crosshairs"></i><span>Set Start</span></button>
+          <button class="btn-drawer-icon" id="btnDrawerToggleFav" title="Save / Star Place"><i class="fa-regular fa-star" id="drawerFavIcon"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATIONS MODAL -->
+  <div class="modal-backdrop hidden" id="notificationsModal">
+    <div class="modal-card notif-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap"><i class="fa-solid fa-bell text-primary"></i><h3>Campus Announcements &amp; Alerts</h3></div>
+        <button class="modal-close-btn" id="btnCloseNotifModal" onclick="closeAllModals()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- ADMIN BROADCAST COMPOSER (Visible to Admin, broadcasts to all loginers) -->
+        <div class="admin-broadcast-composer hidden" id="adminNotifComposer">
+          <div class="abc-header">
+            <i class="fa-solid fa-bullhorn text-amber"></i>
+            <span>Declare Campus Notification (Broadcast to All Loginers)</span>
+          </div>
+          <input type="text" id="adminBroadcastTitle" placeholder="Notification Subject / Title..." class="abc-input">
+          <textarea id="adminBroadcastMessage" placeholder="Type notification to declare and broadcast to all logged-in students, faculty &amp; visitors..." rows="2" class="abc-input" style="resize:vertical;min-height:55px;"></textarea>
+          <div class="abc-actions-row">
+            <select id="adminBroadcastCategory" class="abc-select">
+              <option value="urgent">🚨 Urgent Campus Notice</option>
+              <option value="academic">🎓 Academic Announcement</option>
+              <option value="general">📢 General Notification</option>
+              <option value="facility">🏛️ Facility &amp; Route Update</option>
+            </select>
+            <button type="button" class="btn-abc-send" onclick="adminDeclareNotification()">
+              <i class="fa-solid fa-paper-plane"></i> Declare &amp; Send to All Loginers
+            </button>
+          </div>
+        </div>
+
+        <div class="notif-feed" id="notifFeedList"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-outline-action" id="btnMarkAllRead" onclick="markAllNotificationsAsRead()">Mark all as read</button>
+        <button class="btn-modal-cancel" id="btnCloseNotif" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. SAVED & STARRED PLACES MODAL (FEATURE) -->
+  <div class="modal-backdrop hidden" id="savedPlacesModal">
+    <div class="modal-card saved-places-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-star text-amber"></i>
+          <div>
+            <h3>My Saved Places &amp; Bookmarks</h3>
+            <span class="small-hint">Fast 1-click routing and live open status for your starred locations</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="saved-places-list" id="savedPlacesList">
+          <!-- Dynamically populated by renderSavedPlaces() -->
+        </div>
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+        <button type="button" class="btn-clear-saved" onclick="clearAllSavedPlaces()" style="padding: 6px 12px; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #EF4444; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600; display:inline-flex; align-items:center; gap:6px;">
+          <i class="fa-solid fa-trash-can"></i> Remove All Saved
+        </button>
+        <button type="button" class="btn-modal-cancel" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CAMPUS WEB BROWSER MODAL (EXPLORE PORTALS, DEPARTMENTS & BLOCKS) -->
+  <div class="campus-browser-overlay hidden" id="campusBrowserOverlay">
+    <div class="campus-browser-window">
+      <div class="browser-chrome-bar">
+        <div class="browser-controls">
+          <button class="browser-btn" id="btnBrowserBack" onclick="browserGoBack()" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="browser-btn" id="btnBrowserForward" onclick="browserGoForward()" title="Forward"><i class="fa-solid fa-arrow-right"></i></button>
+          <button class="browser-btn" id="btnBrowserReload" onclick="browserReload()" title="Reload"><i class="fa-solid fa-rotate-right"></i></button>
+          <button class="browser-btn" id="btnBrowserHome" onclick="openCampusBrowser('campus://explore')" title="Campus Home"><i class="fa-solid fa-house"></i></button>
+        </div>
+        <div class="browser-address-bar">
+          <i class="fa-solid fa-shield-halved browser-ssl"></i>
+          <span class="browser-protocol">campus://</span>
+          <input type="text" id="browserUrlInput" class="browser-url-input" value="campus://explore" onkeydown="if(event.key==='Enter')loadBrowserUrl(this.value)">
+          <button class="browser-btn-go" id="btnBrowserGo" onclick="loadBrowserUrl(document.getElementById('browserUrlInput').value)" title="Navigate"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="browser-window-actions">
+          <button class="browser-win-btn" id="btnBrowserMinimize" onclick="closeCampusBrowser()" title="Minimize"><i class="fa-solid fa-window-minimize"></i></button>
+          <button class="browser-win-btn close" id="btnBrowserClose" onclick="closeCampusBrowser()" title="Close Browser">&times;</button>
+        </div>
+      </div>
+      <div class="browser-bookmarks-bar">
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://explore')"><i class="fa-solid fa-compass"></i> All Directory</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-admin')"><i class="fa-solid fa-building-columns"></i> Admin COE</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-intel-joe')"><i class="fa-solid fa-laptop-code"></i> Intel JOE</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-sac')"><i class="fa-solid fa-cubes"></i> SAC Hub</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-tech-block')"><i class="fa-solid fa-gears"></i> Tech Labs</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-arul-mess')"><i class="fa-solid fa-utensils"></i> ARUL Mess</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-health')"><i class="fa-solid fa-truck-medical"></i> Health Centre</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-auditorium')"><i class="fa-solid fa-masks-theater"></i> Auditorium</button>
+        <button class="b-bookmark" onclick="loadBrowserUrl('campus://loc-teresa-grace')"><i class="fa-solid fa-hotel"></i> Hostels</button>
+      </div>
+      <div class="browser-body" id="browserBody"></div>
+    </div>
+  </div>
+
+  <!-- 3. SHARE LOCATION & MEET ME HERE MODAL -->
+  <div class="modal-backdrop hidden" id="shareLocationModal">
+    <div class="modal-card share-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-share-nodes text-primary"></i>
+          <div>
+            <h3>Share Campus Location</h3>
+            <span class="small-hint" id="shareLocationSubtitle">Share exact building pin with friends or colleagues</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="share-card-preview">
+          <div class="share-building-badge" id="shareBuildingIcon"><i class="fa-solid fa-building-columns"></i></div>
+          <div>
+            <h4 id="shareBuildingName">Admin COE Block</h4>
+            <span id="shareBuildingCategory">Academic • Joy University</span>
+          </div>
+        </div>
+        <div class="share-link-box">
+          <label for="shareUrlInput">Direct Navigation Link:</label>
+          <div class="share-input-group">
+            <input type="text" id="shareUrlInput" class="share-url-field" readonly>
+            <button type="button" class="btn-copy-share" onclick="copyShareUrl()"><i class="fa-regular fa-copy"></i> Copy Link</button>
+          </div>
+        </div>
+        <div class="share-quick-buttons">
+          <button type="button" class="btn-share-channel whatsapp" onclick="shareViaChannel('whatsapp')">
+            <i class="fa-brands fa-whatsapp"></i> Share on WhatsApp
+          </button>
+          <button type="button" class="btn-share-channel text-msg" onclick="shareViaChannel('copyText')">
+            <i class="fa-regular fa-message"></i> Copy "Meet Me" Text
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-cancel" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL: ADD CAMPUS BLOCK MODAL -->
+  <div class="modal-backdrop hidden" id="adminAddBlockModal">
+    <div class="modal-card admin-add-block-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-shield-halved text-amber"></i>
+          <div>
+            <h3>Admin Block Studio • Add Campus Building</h3>
+            <span class="small-hint">Create, place and manage interactive campus blocks in real-time</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeAdminAddBlockModal()">&times;</button>
+      </div>
+
+      <!-- TABS -->
+      <div class="admin-tabs-strip">
+        <button type="button" class="admin-tab-btn active" id="tabBtnCreateBlock" onclick="switchAdminAddBlockTab('create')">
+          <i class="fa-solid fa-square-plus"></i> Create New Block
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnManageBlocks" onclick="switchAdminAddBlockTab('manage')">
+          <i class="fa-solid fa-layer-group"></i> Manage Custom Blocks
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- PANE 1: CREATE BLOCK -->
+        <div class="admin-block-pane" id="paneCreateBlock">
+          <form id="formAddNewBlock" onsubmit="event.preventDefault(); handleAddNewLocation();">
+            <div class="form-grid-2col">
+              <div class="input-field-group">
+                <label for="newLocName">Block / Facility Name <span class="required">*</span></label>
+                <input type="text" id="newLocName" class="form-ctrl-input" placeholder="e.g. AI &amp; Robotics Innovation Pavilion" required>
+              </div>
+              <div class="input-field-group">
+                <label for="newLocCode">Block Code / Acronym <span class="required">*</span></label>
+                <input type="text" id="newLocCode" class="form-ctrl-input" placeholder="e.g. AIR-01" required>
+              </div>
+            </div>
+
+            <div class="form-grid-3col">
+              <div class="input-field-group">
+                <label for="newLocCategory">Category</label>
+                <select id="newLocCategory" class="form-ctrl-select">
+                  <option value="academic">Academic &amp; Departments</option>
+                  <option value="amenities">Dining &amp; Mess Hall</option>
+                  <option value="living">Student Residence &amp; Hostels</option>
+                  <option value="health">Healthcare &amp; Emergency</option>
+                  <option value="gates">Perimeter Entry Gate</option>
+                </select>
+              </div>
+              <div class="input-field-group">
+                <label for="newLocTheme">Architectural Style</label>
+                <select id="newLocTheme" class="form-ctrl-select">
+                  <option value="tech_labs">Modern High-Tech (Glass &amp; Labs)</option>
+                  <option value="admin_pillars">Neoclassical (Pillars &amp; Dome)</option>
+                  <option value="intel_rotunda">Futuristic Rotunda (AI Center)</option>
+                  <option value="sac_activity">Community Oval Hub</option>
+                  <option value="chapel_lawns">Garden Pavilion &amp; Lawns</option>
+                  <option value="hostel_towers">Multi-Tier Residence Towers</option>
+                </select>
+              </div>
+              <div class="input-field-group">
+                <label for="newLocColor">Block Accent Color</label>
+                <select id="newLocColor" class="form-ctrl-select">
+                  <option value="#2563EB">Royal Sapphire Blue (#2563EB)</option>
+                  <option value="#059669">Emerald Botanical Green (#059669)</option>
+                  <option value="#D97706">Amber Gold Architecture (#D97706)</option>
+                  <option value="#7C3AED">Imperial Purple Research (#7C3AED)</option>
+                  <option value="#DC2626">Crimson Safety &amp; Emergency (#DC2626)</option>
+                  <option value="#0891B2">Ocean Cyan (#0891B2)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2col">
+              <div class="input-field-group">
+                <label for="newLocHours">Operating Hours</label>
+                <input type="text" id="newLocHours" class="form-ctrl-input" value="08:00 AM – 08:00 PM">
+              </div>
+              <div class="input-field-group">
+                <label for="newLocContact">Department Contact / Hotline</label>
+                <input type="text" id="newLocContact" class="form-ctrl-input" value="Ext. 440 (Front Desk)">
+              </div>
+            </div>
+
+            <div class="input-field-group">
+              <label for="newLocDesc">Public Description &amp; History</label>
+              <textarea id="newLocDesc" class="form-ctrl-textarea" rows="2" placeholder="Brief description of the facility, departments, and research centers housed inside..."></textarea>
+            </div>
+
+            <div class="input-field-group">
+              <label for="newLocFacilities">Key Facilities (comma-separated)</label>
+              <input type="text" id="newLocFacilities" class="form-ctrl-input" value="High-Speed Wi-Fi, Restrooms, Drinking Water, Projector Hall">
+            </div>
+
+            <div class="input-field-group">
+              <label for="newLocFloors">Floor Directory &amp; Classrooms</label>
+              <input type="text" id="newLocFloors" class="form-ctrl-input" value="Ground Floor: Reception, Seminar Hall 1; First Floor: AI Lab, Room 201">
+            </div>
+
+            <!-- COORDINATES PLACEMENT -->
+            <div class="coord-placement-card">
+              <div class="cpc-header">
+                <div>
+                  <i class="fa-solid fa-map-location-dot text-amber"></i>
+                  <strong>Map Placement Coordinates:</strong>
+                  <span class="coord-tag">X: <strong id="displayCoordX">450</strong>, Y: <strong id="displayCoordY">500</strong></span>
+                </div>
+                <button type="button" class="btn-launch-map-picker" onclick="startMapCoordinatePicker()">
+                  <i class="fa-solid fa-crosshairs"></i> Pick Coordinates on Map
+                </button>
+              </div>
+              <div class="cpc-presets">
+                <span class="preset-label">Quick Presets:</span>
+                <button type="button" class="coord-chip" onclick="applyCoordinatePreset(450, 480, 'Central Plaza')">Central Plaza</button>
+                <button type="button" class="coord-chip" onclick="applyCoordinatePreset(150, 390, 'West Gardens')">West Promenade</button>
+                <button type="button" class="coord-chip" onclick="applyCoordinatePreset(650, 680, 'East Boulevard')">East Boulevard</button>
+                <button type="button" class="coord-chip" onclick="applyCoordinatePreset(380, 850, 'South Quad')">South Quad</button>
+              </div>
+              <input type="hidden" id="newLocX" value="450">
+              <input type="hidden" id="newLocY" value="500">
+              <input type="hidden" id="newLocWidth" value="95">
+              <input type="hidden" id="newLocHeight" value="52">
+            </div>
+
+            <div class="modal-form-actions">
+              <button type="button" class="btn-modal-cancel" onclick="closeAdminAddBlockModal()">Cancel</button>
+              <button type="submit" class="btn-submit-add-block">
+                <i class="fa-solid fa-plus-circle"></i> Place &amp; Add Block onto Campus Map
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- PANE 2: MANAGE CUSTOM BLOCKS -->
+        <div class="admin-block-pane hidden" id="paneManageCustomBlocks">
+          <div class="manage-blocks-feed" id="customBlocksManageContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMERGENCY SOS MODAL -->
+  <div class="modal-backdrop hidden" id="emergencyModal">
+    <div class="modal-card emergency-modal">
+      <div class="modal-header emg-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-triangle-exclamation" style="color:#FDE68A;font-size:1.5rem;"></i>
+          <h3 style="color:white;">EMERGENCY SOS</h3>
+        </div>
+        <button class="modal-close-btn" id="btnCloseEmergencyModal" style="color:white;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="emg-sos-hero">
+          <div class="emg-sos-icon-ring"><i class="fa-solid fa-truck-medical"></i></div>
+          <h3>Emergency Alert Activated</h3>
+          <p>Campus security and health centre have been notified. Navigate immediately to the nearest emergency point.</p>
+        </div>
+        <div class="emg-contacts-grid">
+          <button class="btn-emg-route" data-target="loc-health">
+            <i class="fa-solid fa-hospital"></i>
+            <div><strong>Health Centre and Ambulance</strong><span>Navigate Now - Ext. 911/108</span></div>
+          </button>
+          <button class="btn-emg-route" data-target="loc-gate-1">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div><strong>Main Gate Security Post</strong><span>Navigate Now - Ext. 101</span></div>
+          </button>
+          <button class="btn-emg-route" data-target="loc-teresa-grace">
+            <i class="fa-solid fa-house-medical"></i>
+            <div><strong>Warden Office (Hostel)</strong><span>Navigate Now - Ext. 6010</span></div>
+          </button>
+        </div>
+        <button class="ls-highlight-emg-btn" onclick="highlightAllEmergencyPins(); closeAllModals();" style="margin-top:12px;">
+          <i class="fa-solid fa-map-location-dot"></i> Show All Emergency Points on Map
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 5. AUTONOMOUS SHUTTLE & CLIMATE MODAL -->
+  <div class="modal-backdrop hidden" id="shuttleWeatherModal">
+    <div class="modal-card shuttle-modal">
+      <div class="modal-header shuttle-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-van-shuttle text-cyan" style="font-size:1.3rem;"></i>
+          <div>
+            <h3 style="color:white;">Autonomous Shuttle &amp; Campus Telemetry</h3>
+            <span style="color:#C7D2FE;font-size:0.75rem;">Live Electric Fleet Tracking &amp; Campus Weather Sensor Station</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" style="color:white;" onclick="closeAllModals()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="shuttle-telemetry-cards">
+          <div class="st-card">
+            <div class="st-icon green"><i class="fa-solid fa-bus-simple"></i></div>
+            <div class="st-info">
+              <strong id="shuttle1Eta">Shuttle Alpha: Arriving Gate 1 (2 min)</strong>
+              <span>Route: Gate 1 &rarr; Admin &rarr; Tech Block &rarr; Hostels</span>
+            </div>
+            <button class="btn-locate-shuttle" onclick="highlightShuttleOnMap(1)"><i class="fa-solid fa-crosshairs"></i> Track</button>
+          </div>
+          <div class="st-card">
+            <div class="st-icon cyan"><i class="fa-solid fa-bus-simple"></i></div>
+            <div class="st-info">
+              <strong id="shuttle2Eta">Shuttle Beta: Departing Hostels (4 min)</strong>
+              <span>Route: Hostels &rarr; SOAG Joshuva &rarr; Gate 3 &rarr; Gate 1</span>
+            </div>
+            <button class="btn-locate-shuttle" onclick="highlightShuttleOnMap(2)"><i class="fa-solid fa-crosshairs"></i> Track</button>
+          </div>
+        </div>
+
+        <h4 class="st-sub-title"><i class="fa-solid fa-cloud-sun"></i> Campus Micro-Climate Weather Station</h4>
+        <div class="weather-station-grid">
+          <div class="ws-item">
+            <span class="ws-label">AIR TEMP</span>
+            <strong class="ws-val">24°C</strong>
+            <span class="ws-sub">Pleasant &bull; Mild Breeze</span>
+          </div>
+          <div class="ws-item">
+            <span class="ws-label">AIR QUALITY (AQI)</span>
+            <strong class="ws-val text-green">38 AQI</strong>
+            <span class="ws-sub">Optimal Clean Air</span>
+          </div>
+          <div class="ws-item">
+            <span class="ws-label">PEDESTRIAN TRAFFIC</span>
+            <strong class="ws-val text-blue">Moderate</strong>
+            <span class="ws-sub">Walkways Flowing</span>
+          </div>
+          <div class="ws-item">
+            <span class="ws-label">CAMPUS ILLUMINATION</span>
+            <strong class="ws-val">100% Active</strong>
+            <span class="ws-sub">High Visibility Paths</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-cancel" onclick="closeAllModals()">Close Telemetry</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>

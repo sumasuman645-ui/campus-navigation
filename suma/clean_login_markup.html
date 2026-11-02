@@ -1,0 +1,386 @@
+<div class="login-overlay-screen" id="loginScreen">
+    <!-- Ambient Dynamic Aura Background with Radar & Telemetry SVG -->
+    <div class="login-background-decorations">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+      <div class="grid-mesh"></div>
+      
+      <!-- The Big Two Waves: Dual Intertwining Waves with One Line Flowing Over Another -->
+      <svg class="telemetry-svg-backdrop" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Big Wave 1 Gradient Fill: Luminous Cyan/Sky/Blue Ocean Swell -->
+          <linearGradient id="bigWaveFill1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.32"/>
+            <stop offset="35%" stop-color="#00E5FF" stop-opacity="0.22"/>
+            <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#060B17" stop-opacity="0.02"/>
+          </linearGradient>
+
+          <!-- Big Wave 2 Gradient Fill: Sinuous Violet/Indigo/Purple Ocean Swell -->
+          <linearGradient id="bigWaveFill2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.28"/>
+            <stop offset="45%" stop-color="#A855F7" stop-opacity="0.18"/>
+            <stop offset="80%" stop-color="#4F46E5" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#020617" stop-opacity="0.02"/>
+          </linearGradient>
+
+          <!-- Big Wave 1 Glowing Spine Gradient (Cyan/Teal/Sky) -->
+          <linearGradient id="neonWaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.4"/>
+            <stop offset="30%" stop-color="#00E5FF" stop-opacity="0.95"/>
+            <stop offset="70%" stop-color="#38BDF8" stop-opacity="1.0"/>
+            <stop offset="100%" stop-color="#818CF8" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad1Sub1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.25"/>
+            <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.85"/>
+            <stop offset="85%" stop-color="#60A5FA" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.35"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad1Sub2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0369A1" stop-opacity="0.2"/>
+            <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.3"/>
+          </linearGradient>
+
+          <!-- Big Wave 2 Glowing Spine Gradient (Violet/Magenta/Purple - Weaving Over) -->
+          <linearGradient id="neonWaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#818CF8" stop-opacity="0.4"/>
+            <stop offset="35%" stop-color="#A855F7" stop-opacity="0.95"/>
+            <stop offset="70%" stop-color="#EC4899" stop-opacity="1.0"/>
+            <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad2Sub1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.25"/>
+            <stop offset="45%" stop-color="#C084FC" stop-opacity="0.85"/>
+            <stop offset="85%" stop-color="#F472B6" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.35"/>
+          </linearGradient>
+          <linearGradient id="neonWaveGrad2Sub2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#6366F1" stop-opacity="0.2"/>
+            <stop offset="50%" stop-color="#9333EA" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#E879F9" stop-opacity="0.3"/>
+          </linearGradient>
+
+          <!-- Glowing Cyber Neon Filter -->
+          <filter id="bigWaveDualGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4.5" result="glow1"/>
+            <feGaussianBlur stdDeviation="9" result="glow2"/>
+            <feMerge>
+              <feMergeNode in="glow2"/>
+              <feMergeNode in="glow1"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Ambient Concentric Radar Circles in bottom-left corner -->
+        <circle cx="120" cy="880" r="160" fill="none" stroke="rgba(56, 189, 248, 0.12)" stroke-width="1.2" stroke-dasharray="4 6"/>
+        <circle cx="120" cy="880" r="300" fill="none" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1"/>
+        <circle cx="120" cy="880" r="480" fill="none" stroke="rgba(56, 189, 248, 0.05)" stroke-width="1" stroke-dasharray="8 8"/>
+
+        <!-- 1. BIG WAVE 1: CYAN / AZURE OCEANIC SWELL & FLOWING LINES -->
+        <g class="big-waves-container wave-one-group">
+          <!-- Wave 1 Body Fill -->
+          <path class="big-wave-fill wave-one" d="M -100 680 C 320 450, 720 860, 1140 600 C 1480 390, 1750 720, 2050 500 L 2050 1200 L -100 1200 Z" fill="url(#bigWaveFill1)"/>
+          
+          <!-- Wave 1 Layered Harmonic Lines ("one line on another line") -->
+          <g class="wave-lines-layer" filter="url(#bigWaveDualGlow)">
+            <!-- Parallel offset line A (stacked 18px above) -->
+            <path class="big-wave-line wave-stream-primary-sub1" d="M -100 662 C 320 432, 720 842, 1140 582 C 1480 372, 1750 702, 2050 482" fill="none" stroke="url(#neonWaveGrad1Sub1)" stroke-width="2.2" stroke-dasharray="14 10"/>
+            
+            <!-- Main luminous spine line of Wave 1 -->
+            <path class="big-wave-line wave-stream-primary" d="M -100 680 C 320 450, 720 860, 1140 600 C 1480 390, 1750 720, 2050 500" fill="none" stroke="url(#neonWaveGrad1)" stroke-width="4.2" stroke-linecap="round"/>
+            
+            <!-- Parallel offset line B (stacked 20px below) -->
+            <path class="big-wave-line wave-stream-primary-sub2" d="M -100 700 C 320 470, 720 880, 1140 620 C 1480 410, 1750 740, 2050 520" fill="none" stroke="url(#neonWaveGrad1Sub2)" stroke-width="1.8" stroke-dasharray="10 14"/>
+          </g>
+        </g>
+
+        <!-- 2. BIG WAVE 2: VIOLET / PURPLE COUNTER-WAVE WEAVING OVER WAVE 1 ("ONE LINE GOING ON ANOTHER LINE") -->
+        <g class="big-waves-container wave-two-group">
+          <!-- Wave 2 Body Fill -->
+          <path class="big-wave-fill wave-two" d="M -100 460 C 340 760, 740 380, 1160 740 C 1480 880, 1720 360, 2050 640 L 2050 1200 L -100 1200 Z" fill="url(#bigWaveFill2)"/>
+          
+          <!-- Wave 2 Layered Harmonic Lines ("one line on another line") -->
+          <g class="wave-lines-layer" filter="url(#bigWaveDualGlow)">
+            <!-- Parallel offset line A (stacked 18px above) -->
+            <path class="big-wave-line wave-stream-secondary-sub1" d="M -100 442 C 340 742, 740 362, 1160 722 C 1480 862, 1720 342, 2050 622" fill="none" stroke="url(#neonWaveGrad2Sub1)" stroke-width="2.2" stroke-dasharray="16 12"/>
+            
+            <!-- Main luminous spine line of Wave 2 (flows directly on top of / across Wave 1) -->
+            <path class="big-wave-line wave-stream-secondary" d="M -100 460 C 340 760, 740 380, 1160 740 C 1480 880, 1720 360, 2050 640" fill="none" stroke="url(#neonWaveGrad2)" stroke-width="4.2" stroke-linecap="round"/>
+            
+            <!-- Parallel offset line B (stacked 20px below) -->
+            <path class="big-wave-line wave-stream-secondary-sub2" d="M -100 480 C 340 780, 740 400, 1160 760 C 1480 900, 1720 380, 2050 660" fill="none" stroke="url(#neonWaveGrad2Sub2)" stroke-width="1.8" stroke-dasharray="12 16"/>
+          </g>
+        </g>
+
+        <!-- 3. INTERTWINING CROSSING NODES (WHERE ONE LINE GOES ON ANOTHER LINE) -->
+        <g class="wave-crossing-beacons" filter="url(#bigWaveDualGlow)">
+          <!-- Crossing Intersection 1 (Left flank) -->
+          <g class="wave-crossing-node" transform="translate(200, 570)">
+            <circle class="wave-beacon-ring" r="8" fill="none" stroke="#00E5FF" stroke-width="2"/>
+            <circle class="wave-beacon-ring delayed" r="8" fill="none" stroke="#A855F7" stroke-width="1.5"/>
+            <circle r="4.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Crossing Intersection 2 (Center crest - Wave 2 sweeping over Wave 1) -->
+          <g class="wave-crossing-node" transform="translate(660, 620)">
+            <circle class="wave-beacon-ring" r="10" fill="none" stroke="#38BDF8" stroke-width="2"/>
+            <circle class="wave-beacon-ring delayed" r="10" fill="none" stroke="#EC4899" stroke-width="1.5"/>
+            <circle r="5" fill="#38BDF8"/>
+            <circle r="2.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Crossing Intersection 3 (Behind login card area) -->
+          <g class="wave-crossing-node" transform="translate(1340, 480)">
+            <circle class="wave-beacon-ring" r="14" fill="none" stroke="#00E5FF" stroke-width="2.2"/>
+            <circle class="wave-beacon-ring delayed" r="14" fill="none" stroke="#A855F7" stroke-width="1.8"/>
+            <circle r="6" fill="#00E5FF"/>
+            <circle r="3" fill="#FFFFFF"/>
+            <text x="20" y="5" fill="#00E5FF" font-size="11" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" letter-spacing="1">NAV-STREAM // CORRIDOR 01</text>
+          </g>
+
+          <!-- Far Right Crest Node -->
+          <g class="wave-crossing-node" transform="translate(1740, 340)">
+            <circle class="wave-beacon-ring" r="10" fill="none" stroke="#C084FC" stroke-width="2"/>
+            <circle r="5" fill="#EC4899"/>
+            <circle r="2" fill="#FFFFFF"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- MAIN DUAL-COLUMN CONTAINER (HERO TELEMETRY SHOWCASE + CAMPUS LOGIN) -->
+    <div class="login-layout-wrapper pos-right" id="loginLayoutWrapper">
+      
+      <!-- LEFT COLUMN: HERO & CAMPUS TELEMETRY SHOWCASE -->
+      <div class="login-hero-showcase" id="loginHeroShowcase">
+        <div class="hero-brand-top">
+          <span class="hero-badge-tag">SMART UNIVERSITY GUIDE</span>
+          <h1 class="hero-main-title">Campus Navigation</h1>
+          <h2 class="hero-tagline">Explore Every Corner of Campus Effortlessly.</h2>
+          <p class="hero-description">
+            Turn-by-turn indoor &amp; outdoor wayfinding, live shuttle telemetry, shortest accessible paths, and real-time facility search for the entire university community.
+          </p>
+        </div>
+
+        <!-- 3 LIVE TELEMETRY CARDS -->
+        <div class="telemetry-cards-row">
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon cyan">
+              <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">GPS SATELLITE MESH</span>
+              <strong class="telemetry-chip-val">
+                <span class="live-dot-green"></span> Live • ±0.8m Accuracy
+              </strong>
+            </div>
+          </div>
+
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon blue">
+              <i class="fa-solid fa-van-shuttle"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">CAMPUS SHUTTLES</span>
+              <strong class="telemetry-chip-val">
+                2 Active Fleets En Route
+              </strong>
+            </div>
+          </div>
+
+          <div class="telemetry-chip">
+            <div class="telemetry-chip-icon teal">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="telemetry-chip-info">
+              <span class="telemetry-chip-label">CAMPUS WEATHER</span>
+              <strong class="telemetry-chip-val">
+                24°C • Optimal Air (38 AQI)
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVE WAYFINDING PATH CARD -->
+        <div class="active-wayfinding-preview">
+          <div class="awp-header">
+            <div class="awp-title">
+              <i class="fa-solid fa-diamond awp-diamond"></i>
+              <span>Active Wayfinding</span>
+            </div>
+            <div class="awp-time">
+              <i class="fa-regular fa-clock"></i>
+              <span>3 min walk (250m)</span>
+            </div>
+          </div>
+          <div class="awp-route-track">
+            <div class="awp-node green">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Main Gate 1 Entrance</span>
+            </div>
+            <div class="awp-dash"></div>
+            <div class="awp-node blue">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Admin Plaza</span>
+            </div>
+            <div class="awp-dash"></div>
+            <div class="awp-node yellow">
+              <span class="awp-dot"></span>
+              <span class="awp-node-name">Tech &amp; AI Complex</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK FEATURE PILL BUTTONS -->
+        <div class="hero-quick-tags">
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-route"></i> Shortest Path Finder
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-wheelchair"></i> Barrier-Free Routes
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-chalkboard-user"></i> Lecture Hall Locator
+          </button>
+          <button type="button" class="hero-tag-btn">
+            <i class="fa-solid fa-tower-broadcast"></i> Real-time Fleet Tracking
+          </button>
+        </div>
+
+        <!-- BOTTOM HUD RADAR & ENTRY WAYPOINT -->
+        <div class="hero-bottom-hud">
+          <div class="hud-compass-dial">
+            <div class="hud-compass-ring">
+              <div class="hud-compass-sweep"></div>
+              <div class="hud-needle"></div>
+              <span class="hud-cardinal n">N</span>
+              <span class="hud-cardinal s">S</span>
+              <span class="hud-cardinal e">E</span>
+              <span class="hud-cardinal w">W</span>
+            </div>
+          </div>
+          <div class="hud-waypoint-badge">
+            <span class="hud-waypoint-dot"></span>
+            <strong>Main Gate 1 • Entry</strong>
+          </div>
+          <div class="hud-flow-line">
+            <span class="hud-hub-node">Student Hub</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: CAMPUS LOGIN CARD -->
+      <div class="creative-login-card" id="creativeLoginCard">
+        <!-- Soft subtle ambient backdrop glow (does not dominate sign in page) -->
+        <div class="sign-card-subtle-glow" aria-hidden="true"></div>
+
+        <!-- CARD HEADER & LOGOUT ACTION -->
+        <div class="clg-header">
+          <div class="clg-title-block">
+            <h2 class="clg-title">Campus Navigation</h2>
+            <span class="clg-univ-sub">Joy University</span>
+          </div>
+          <button type="button" class="clg-header-logout-btn" id="btnLoginHeaderLogout" onclick="handleLogout()" title="Logout &amp; Reset Session">
+            <i class="fa-solid fa-power-off"></i>
+            <span>Logout &amp; Reset</span>
+          </button>
+        </div>
+
+        <!-- 4 DISTINCT LOGIN MODULES (STUDENT, STAFF, VISITOR, ADMIN) -->
+        <div class="clg-modules-wrapper">
+          <span class="clg-modules-heading">LOGIN AS:</span>
+          <div class="clg-modules-grid" id="loginRoleTabs">
+            <!-- 1: Student -->
+            <button type="button" class="clg-module-card active" id="moduleBtnStudent" data-role="student" onclick="selectLoginRole('student')">
+              <div class="clg-module-icon student">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Student</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 2: Staff -->
+            <button type="button" class="clg-module-card" id="moduleBtnStaff" data-role="staff" onclick="selectLoginRole('staff')">
+              <div class="clg-module-icon staff">
+                <i class="fa-solid fa-id-badge"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Staff</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 3: Visitor -->
+            <button type="button" class="clg-module-card" id="moduleBtnVisitor" data-role="visitor" onclick="selectLoginRole('visitor')">
+              <div class="clg-module-icon visitor">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Visitor</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+
+            <!-- 4: Admin -->
+            <button type="button" class="clg-module-card" id="moduleBtnAdmin" data-role="admin" onclick="selectLoginRole('admin')">
+              <div class="clg-module-icon admin">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="clg-module-info">
+                <strong class="clg-module-name">Admin</strong>
+              </div>
+              <span class="clg-active-indicator"><i class="fa-solid fa-check"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- AUTHENTICATION FORM -->
+        <form class="clg-auth-form" id="unifiedLoginForm" onsubmit="event.preventDefault(); handleUnifiedLoginSubmit();">
+          <!-- Name Input -->
+          <div class="clg-field-group">
+            <label for="loginNameInput" id="labelLoginName" class="clg-field-label">Student Name</label>
+            <div class="clg-input-wrapper">
+              <i class="fa-regular fa-user clg-input-prefix" id="iconLoginName"></i>
+              <input type="text" id="loginNameInput" class="clg-input-field" placeholder="Enter student full name" autocomplete="off" required value="" oninput="handleLoginNameInput(this.value)">
+            </div>
+          </div>
+
+          <!-- Password / ID Input -->
+          <div class="clg-field-group" id="clgPasswordGroup">
+            <label for="loginPasswordInput" id="labelLoginPass" class="clg-field-label">Password</label>
+            <div class="clg-input-wrapper">
+              <i class="fa-solid fa-lock clg-input-prefix" id="iconLoginPass"></i>
+              <input type="password" id="loginPasswordInput" class="clg-input-field" placeholder="Enter password" autocomplete="off" required value="">
+              <button type="button" class="clg-toggle-pw-btn" onclick="togglePasswordVisibility('loginPasswordInput')" title="Show / Hide Password">
+                <i class="fa-regular fa-eye" id="pwEyeIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Admin Demo Autofill Helper -->
+          <div class="clg-admin-hint" id="adminAutofillHint" style="display:none;" onclick="autofillAdminCredentials()">
+            <i class="fa-solid fa-key"></i> Demo Admin: <strong>suma</strong> | PIN: <strong>581200</strong> <span style="text-decoration:underline; font-weight:700; margin-left:4px;">(Click to Autofill)</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="clg-submit-action-btn" id="btnLoginSubmit">
+            <span id="btnSubmitText">Sign in</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <!-- Direct Guest Map Explorer Button -->
+          <button type="button" class="clg-guest-direct-btn" onclick="enterAsGuest()" style="margin-top: 10px; width: 100%; padding: 11px; border-radius: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38BDF8; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.9rem; transition: all 0.2s ease;">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Explore Campus Map Directly</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>

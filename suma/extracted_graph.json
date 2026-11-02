@@ -1,0 +1,2349 @@
+{
+  "nodes": {
+    "W_GATE1": {
+      "id": "W_GATE1",
+      "x": 378,
+      "y": 68,
+      "label": "Gate 1 Concourse",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GATE1_W": {
+      "id": "W_GATE1_W",
+      "x": 315,
+      "y": 68,
+      "label": "Gate 1 West Concourse",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_CAFE_W": {
+      "id": "W_CAFE_W",
+      "x": 445,
+      "y": 68,
+      "label": "North Cafe Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_CAFE_E": {
+      "id": "W_CAFE_E",
+      "x": 540,
+      "y": 68,
+      "label": "North Cafe Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_POND_W": {
+      "id": "W_POND_W",
+      "x": 415,
+      "y": 105,
+      "label": "Fish Pond Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PARK_N": {
+      "id": "W_PARK_N",
+      "x": 585,
+      "y": 68,
+      "label": "North Parking Lane",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GATE2": {
+      "id": "W_GATE2",
+      "x": 670,
+      "y": 68,
+      "label": "Gate 2 Entrance",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PARK_NE": {
+      "id": "W_PARK_NE",
+      "x": 780,
+      "y": 68,
+      "label": "North East Parking Lane",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GATE3": {
+      "id": "W_GATE3",
+      "x": 835,
+      "y": 68,
+      "label": "Gate 3 Approach",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_NW_CORNER": {
+      "id": "W_NW_CORNER",
+      "x": 50,
+      "y": 18,
+      "label": "Northwest Perimeter Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_JULIANNA_NW": {
+      "id": "W_JULIANNA_NW",
+      "x": 115,
+      "y": 18,
+      "label": "Julianna NW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_JULIANNA_NE": {
+      "id": "W_JULIANNA_NE",
+      "x": 280,
+      "y": 18,
+      "label": "Julianna NE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_JULIANNA_E": {
+      "id": "W_JULIANNA_E",
+      "x": 280,
+      "y": 68,
+      "label": "Julianna East Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AIRPLANE": {
+      "id": "W_AIRPLANE",
+      "x": 280,
+      "y": 155,
+      "label": "Aviation Square Lane",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_SOAG": {
+      "id": "W_SOAG",
+      "x": 280,
+      "y": 240,
+      "label": "Joshuva Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_SAC_N": {
+      "id": "W_SAC_N",
+      "x": 280,
+      "y": 285,
+      "label": "SAC North-East Junction",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_SAC_E": {
+      "id": "W_SAC_E",
+      "x": 280,
+      "y": 335,
+      "label": "SAC East Concourse (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_1": {
+      "id": "W_WEST_1",
+      "x": 50,
+      "y": 155,
+      "label": "Joveena West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_2": {
+      "id": "W_WEST_2",
+      "x": 50,
+      "y": 240,
+      "label": "Joshuva West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_3": {
+      "id": "W_WEST_3",
+      "x": 50,
+      "y": 335,
+      "label": "SAC West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_4": {
+      "id": "W_WEST_4",
+      "x": 50,
+      "y": 460,
+      "label": "Tech Blocks West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_5": {
+      "id": "W_WEST_5",
+      "x": 50,
+      "y": 570,
+      "label": "Maintenance West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_WEST_6": {
+      "id": "W_WEST_6",
+      "x": 50,
+      "y": 680,
+      "label": "Francis Block West Way (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PREP_AB": {
+      "id": "W_PREP_AB",
+      "x": 75,
+      "y": 760,
+      "label": "South Gate Boulevard",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_TECH_N": {
+      "id": "W_TECH_N",
+      "x": 280,
+      "y": 390,
+      "label": "Tech Block North Junction",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_TECH_MID": {
+      "id": "W_TECH_MID",
+      "x": 280,
+      "y": 460,
+      "label": "Tech Block Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GENSET": {
+      "id": "W_GENSET",
+      "x": 280,
+      "y": 570,
+      "label": "Genset Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_FRANCIS": {
+      "id": "W_FRANCIS",
+      "x": 280,
+      "y": 680,
+      "label": "Francis Block Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_FRANCIS_S": {
+      "id": "W_FRANCIS_S",
+      "x": 280,
+      "y": 760,
+      "label": "Francis Block South Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ARCH": {
+      "id": "W_ARCH",
+      "x": 360,
+      "y": 740,
+      "label": "Arch Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_NW": {
+      "id": "W_ADMIN_NW",
+      "x": 315,
+      "y": 140,
+      "label": "Admin NW Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_NE": {
+      "id": "W_ADMIN_NE",
+      "x": 540,
+      "y": 140,
+      "label": "Admin NE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_SW": {
+      "id": "W_ADMIN_SW",
+      "x": 315,
+      "y": 225,
+      "label": "Admin SW Corner (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_SE": {
+      "id": "W_ADMIN_SE",
+      "x": 540,
+      "y": 225,
+      "label": "Admin SE Corner (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_N": {
+      "id": "W_ADMIN_N",
+      "x": 425,
+      "y": 140,
+      "label": "Admin North Portico",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_W": {
+      "id": "W_ADMIN_W",
+      "x": 315,
+      "y": 180,
+      "label": "Admin West Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADMIN_E": {
+      "id": "W_ADMIN_E",
+      "x": 540,
+      "y": 180,
+      "label": "Admin East Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_COURTYARD_N": {
+      "id": "W_COURTYARD_N",
+      "x": 425,
+      "y": 225,
+      "label": "Central Quad North (Below Admin)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_COURTYARD_C": {
+      "id": "W_COURTYARD_C",
+      "x": 365,
+      "y": 335,
+      "label": "Central Campus Spine",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_INTEL_NW": {
+      "id": "W_INTEL_NW",
+      "x": 490,
+      "y": 335,
+      "label": "Intel JOE NW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_INTEL_NE": {
+      "id": "W_INTEL_NE",
+      "x": 600,
+      "y": 335,
+      "label": "Intel JOE NE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_INTEL_N": {
+      "id": "W_INTEL_N",
+      "x": 540,
+      "y": 335,
+      "label": "Intel JOE North Plaza",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_INTEL_E": {
+      "id": "W_INTEL_E",
+      "x": 600,
+      "y": 395,
+      "label": "Intel JOE Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_INTEL_SE": {
+      "id": "W_INTEL_SE",
+      "x": 600,
+      "y": 450,
+      "label": "Intel JOE SE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MESS_W": {
+      "id": "W_MESS_W",
+      "x": 365,
+      "y": 480,
+      "label": "ARUL Mess Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MESS_NW": {
+      "id": "W_MESS_NW",
+      "x": 365,
+      "y": 425,
+      "label": "ARUL Mess NW Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MESS_SW": {
+      "id": "W_MESS_SW",
+      "x": 365,
+      "y": 530,
+      "label": "ARUL Mess SW Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MESS_E": {
+      "id": "W_MESS_E",
+      "x": 490,
+      "y": 480,
+      "label": "Corridor between Mess and Intel",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MESS_SE": {
+      "id": "W_MESS_SE",
+      "x": 490,
+      "y": 530,
+      "label": "ARUL Mess SE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_NW": {
+      "id": "W_AUDI_NW",
+      "x": 365,
+      "y": 535,
+      "label": "Auditorium NW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_NE": {
+      "id": "W_AUDI_NE",
+      "x": 585,
+      "y": 535,
+      "label": "Auditorium NE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_N": {
+      "id": "W_AUDI_N",
+      "x": 490,
+      "y": 535,
+      "label": "Auditorium North Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_W": {
+      "id": "W_AUDI_W",
+      "x": 365,
+      "y": 575,
+      "label": "Auditorium Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_E": {
+      "id": "W_AUDI_E",
+      "x": 585,
+      "y": 575,
+      "label": "Auditorium Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_SW": {
+      "id": "W_AUDI_SW",
+      "x": 365,
+      "y": 615,
+      "label": "Auditorium SW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_SE": {
+      "id": "W_AUDI_SE",
+      "x": 585,
+      "y": 615,
+      "label": "Auditorium SE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_AUDI_S": {
+      "id": "W_AUDI_S",
+      "x": 490,
+      "y": 615,
+      "label": "Auditorium South Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_HOSTEL_TG": {
+      "id": "W_HOSTEL_TG",
+      "x": 365,
+      "y": 660,
+      "label": "Teresa Hostel Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GRACE_E": {
+      "id": "W_GRACE_E",
+      "x": 585,
+      "y": 660,
+      "label": "Grace Block Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_HOSTEL_SW": {
+      "id": "W_HOSTEL_SW",
+      "x": 365,
+      "y": 705,
+      "label": "Hostel SW Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GRACE_SE": {
+      "id": "W_GRACE_SE",
+      "x": 585,
+      "y": 705,
+      "label": "Grace SE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GINO_NW": {
+      "id": "W_GINO_NW",
+      "x": 595,
+      "y": 115,
+      "label": "GINO NW Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GINO_NE": {
+      "id": "W_GINO_NE",
+      "x": 800,
+      "y": 115,
+      "label": "GINO NE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GINO": {
+      "id": "W_GINO",
+      "x": 695,
+      "y": 115,
+      "label": "GINO North Road (Above GINO)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GINO_E": {
+      "id": "W_GINO_E",
+      "x": 800,
+      "y": 165,
+      "label": "GINO East Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GINO_SE": {
+      "id": "W_GINO_SE",
+      "x": 800,
+      "y": 210,
+      "label": "GINO SE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_LAWN_NW": {
+      "id": "W_LAWN_NW",
+      "x": 605,
+      "y": 215,
+      "label": "Quadrangle Lawns NW Walk",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_LAWN_NE": {
+      "id": "W_LAWN_NE",
+      "x": 810,
+      "y": 215,
+      "label": "Quadrangle Lawns NE Walk",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_LAWN_C": {
+      "id": "W_LAWN_C",
+      "x": 700,
+      "y": 310,
+      "label": "Quadrangle Lawns Centre Cross",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_CHAPEL": {
+      "id": "W_CHAPEL",
+      "x": 700,
+      "y": 380,
+      "label": "Campus Chapel Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_LAWN_SW": {
+      "id": "W_LAWN_SW",
+      "x": 605,
+      "y": 460,
+      "label": "Quadrangle Lawns SW Walk",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_LAWN_SE": {
+      "id": "W_LAWN_SE",
+      "x": 810,
+      "y": 460,
+      "label": "Quadrangle Lawns SE Walk",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_EAST_1": {
+      "id": "W_EAST_1",
+      "x": 835,
+      "y": 195,
+      "label": "Soosai Road North (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_EAST_2": {
+      "id": "W_EAST_2",
+      "x": 835,
+      "y": 295,
+      "label": "Soosai Road Mid (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_EAST_3": {
+      "id": "W_EAST_3",
+      "x": 835,
+      "y": 395,
+      "label": "Soosai Road South (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_SOOSAI": {
+      "id": "W_SOOSAI",
+      "x": 835,
+      "y": 310,
+      "label": "Soosai Main Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_NW": {
+      "id": "W_ADHI_NW",
+      "x": 615,
+      "y": 500,
+      "label": "Adhiharam NW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_NE": {
+      "id": "W_ADHI_NE",
+      "x": 885,
+      "y": 500,
+      "label": "Adhiharam NE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_N": {
+      "id": "W_ADHI_N",
+      "x": 750,
+      "y": 500,
+      "label": "Adhiharam North Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_W": {
+      "id": "W_ADHI_W",
+      "x": 615,
+      "y": 550,
+      "label": "Adhiharam Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_E": {
+      "id": "W_ADHI_E",
+      "x": 885,
+      "y": 550,
+      "label": "Adhiharam Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_SW": {
+      "id": "W_ADHI_SW",
+      "x": 615,
+      "y": 595,
+      "label": "Adhiharam SW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ADHI_SE": {
+      "id": "W_ADHI_SE",
+      "x": 885,
+      "y": 595,
+      "label": "Adhiharam SE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_N": {
+      "id": "W_RAJA_N",
+      "x": 700,
+      "y": 605,
+      "label": "S A RAJA North Avenue",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_NW": {
+      "id": "W_RAJA_NW",
+      "x": 595,
+      "y": 605,
+      "label": "Raja NW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_NE": {
+      "id": "W_RAJA_NE",
+      "x": 780,
+      "y": 605,
+      "label": "Raja NE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_W": {
+      "id": "W_RAJA_W",
+      "x": 595,
+      "y": 655,
+      "label": "Raja Block Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_E": {
+      "id": "W_RAJA_E",
+      "x": 780,
+      "y": 655,
+      "label": "Raja Block Road (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_SW": {
+      "id": "W_RAJA_SW",
+      "x": 595,
+      "y": 700,
+      "label": "Raja SW Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_SE": {
+      "id": "W_RAJA_SE",
+      "x": 780,
+      "y": 700,
+      "label": "Raja SE Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_RAJA_S": {
+      "id": "W_RAJA_S",
+      "x": 690,
+      "y": 700,
+      "label": "Raja Block South Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PUSHBAM_N": {
+      "id": "W_PUSHBAM_N",
+      "x": 480,
+      "y": 705,
+      "label": "Pushbam North Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PUSHBAM": {
+      "id": "W_PUSHBAM",
+      "x": 480,
+      "y": 745,
+      "label": "Pushbam Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_PUSHBAM_S": {
+      "id": "W_PUSHBAM_S",
+      "x": 480,
+      "y": 780,
+      "label": "Pushbam South Road",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_ANNAM": {
+      "id": "W_ANNAM",
+      "x": 610,
+      "y": 700,
+      "label": "Annam Block Road (Top side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_NCC": {
+      "id": "W_NCC",
+      "x": 705,
+      "y": 700,
+      "label": "NCC Wing Road (Top side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_HEALTH": {
+      "id": "W_HEALTH",
+      "x": 820,
+      "y": 690,
+      "label": "Health Centre Road (Top side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_HEALTH_NE": {
+      "id": "W_HEALTH_NE",
+      "x": 895,
+      "y": 690,
+      "label": "Health Centre NE Corner",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_HEALTH_E": {
+      "id": "W_HEALTH_E",
+      "x": 895,
+      "y": 745,
+      "label": "Health Centre East (Right side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GATE4": {
+      "id": "W_GATE4",
+      "x": 905,
+      "y": 630,
+      "label": "Gate 4 Concourse",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_MUTHRAJ": {
+      "id": "W_MUTHRAJ",
+      "x": 435,
+      "y": 800,
+      "label": "Muthraj Road (Left side)",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_SOUTH_WAY": {
+      "id": "W_SOUTH_WAY",
+      "x": 360,
+      "y": 775,
+      "label": "South Perimeter Concourse",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    },
+    "W_GATE5": {
+      "id": "W_GATE5",
+      "x": 920,
+      "y": 745,
+      "label": "Gate 5 Concourse",
+      "tags": [
+        "accessible",
+        "main",
+        "safe"
+      ]
+    }
+  },
+  "edges": [
+    {
+      "u": "W_GATE1",
+      "v": "W_GATE1_W",
+      "distance": 63,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GATE1",
+      "v": "W_POND_W",
+      "distance": 52,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_POND_W",
+      "v": "W_CAFE_W",
+      "distance": 47,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_CAFE_W",
+      "v": "W_CAFE_E",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_CAFE_E",
+      "v": "W_PARK_N",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PARK_N",
+      "v": "W_GATE2",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GATE2",
+      "v": "W_PARK_NE",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PARK_NE",
+      "v": "W_GATE3",
+      "distance": 55,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GATE1_W",
+      "v": "W_JULIANNA_E",
+      "distance": 35,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GATE1_W",
+      "v": "W_ADMIN_NW",
+      "distance": 72,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_JULIANNA_E",
+      "v": "W_JULIANNA_NE",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_JULIANNA_NE",
+      "v": "W_JULIANNA_NW",
+      "distance": 165,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_JULIANNA_NW",
+      "v": "W_NW_CORNER",
+      "distance": 65,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_JULIANNA_E",
+      "v": "W_AIRPLANE",
+      "distance": 87,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AIRPLANE",
+      "v": "W_SOAG",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SOAG",
+      "v": "W_SAC_N",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SAC_N",
+      "v": "W_SAC_E",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_NW_CORNER",
+      "v": "W_WEST_1",
+      "distance": 137,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_1",
+      "v": "W_WEST_2",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_2",
+      "v": "W_WEST_3",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_3",
+      "v": "W_WEST_4",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_4",
+      "v": "W_WEST_5",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_5",
+      "v": "W_WEST_6",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_WEST_6",
+      "v": "W_PREP_AB",
+      "distance": 83,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PREP_AB",
+      "v": "W_FRANCIS_S",
+      "distance": 205,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_FRANCIS_S",
+      "v": "W_SOUTH_WAY",
+      "distance": 81,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SAC_E",
+      "v": "W_TECH_N",
+      "distance": 55,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_TECH_N",
+      "v": "W_TECH_MID",
+      "distance": 70,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_TECH_MID",
+      "v": "W_GENSET",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GENSET",
+      "v": "W_FRANCIS",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_FRANCIS",
+      "v": "W_FRANCIS_S",
+      "distance": 80,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_POND_W",
+      "v": "W_ADMIN_N",
+      "distance": 36,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_NW",
+      "v": "W_ADMIN_N",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_N",
+      "v": "W_ADMIN_NE",
+      "distance": 115,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_NW",
+      "v": "W_ADMIN_W",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_W",
+      "v": "W_ADMIN_SW",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_NE",
+      "v": "W_ADMIN_E",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_E",
+      "v": "W_ADMIN_SE",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_SW",
+      "v": "W_COURTYARD_N",
+      "distance": 110,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_COURTYARD_N",
+      "v": "W_ADMIN_SE",
+      "distance": 115,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_SW",
+      "v": "W_AIRPLANE",
+      "distance": 78,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_COURTYARD_N",
+      "v": "W_COURTYARD_C",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SAC_E",
+      "v": "W_COURTYARD_C",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_COURTYARD_C",
+      "v": "W_INTEL_NW",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_NW",
+      "v": "W_INTEL_N",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_N",
+      "v": "W_INTEL_NE",
+      "distance": 60,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_NE",
+      "v": "W_INTEL_E",
+      "distance": 60,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_E",
+      "v": "W_INTEL_SE",
+      "distance": 55,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_NW",
+      "v": "W_MESS_NW",
+      "distance": 154,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_NW",
+      "v": "W_MESS_W",
+      "distance": 55,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_W",
+      "v": "W_MESS_SW",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_SW",
+      "v": "W_AUDI_NW",
+      "distance": 10,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_SE",
+      "v": "W_AUDI_NE",
+      "distance": 86,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_W",
+      "v": "W_TECH_MID",
+      "distance": 87,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_SW",
+      "v": "W_MESS_SE",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_MESS_SE",
+      "v": "W_AUDI_N",
+      "distance": 10,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_NW",
+      "v": "W_AUDI_N",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_N",
+      "v": "W_AUDI_NE",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_NW",
+      "v": "W_AUDI_W",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_W",
+      "v": "W_AUDI_SW",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_NE",
+      "v": "W_AUDI_E",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_E",
+      "v": "W_AUDI_SE",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_SW",
+      "v": "W_AUDI_S",
+      "distance": 125,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_S",
+      "v": "W_AUDI_SE",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_SW",
+      "v": "W_HOSTEL_TG",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HOSTEL_TG",
+      "v": "W_HOSTEL_SW",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_SE",
+      "v": "W_GRACE_E",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GRACE_E",
+      "v": "W_GRACE_SE",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HOSTEL_SW",
+      "v": "W_ARCH",
+      "distance": 35,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ARCH",
+      "v": "W_SOUTH_WAY",
+      "distance": 35,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HOSTEL_SW",
+      "v": "W_PUSHBAM_N",
+      "distance": 115,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PUSHBAM_N",
+      "v": "W_PUSHBAM",
+      "distance": 40,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PUSHBAM",
+      "v": "W_PUSHBAM_S",
+      "distance": 35,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PUSHBAM_S",
+      "v": "W_SOUTH_WAY",
+      "distance": 120,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SOUTH_WAY",
+      "v": "W_MUTHRAJ",
+      "distance": 79,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_NE",
+      "v": "W_GINO_NW",
+      "distance": 60,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO_NW",
+      "v": "W_GINO",
+      "distance": 100,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO",
+      "v": "W_GINO_NE",
+      "distance": 105,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO_NE",
+      "v": "W_PARK_NE",
+      "distance": 51,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO_NE",
+      "v": "W_GINO_E",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO_E",
+      "v": "W_GINO_SE",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GINO_SE",
+      "v": "W_LAWN_NE",
+      "distance": 11,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADMIN_SE",
+      "v": "W_LAWN_NW",
+      "distance": 65,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_NW",
+      "v": "W_LAWN_C",
+      "distance": 134,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_NE",
+      "v": "W_EAST_1",
+      "distance": 32,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_NE",
+      "v": "W_LAWN_C",
+      "distance": 145,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_C",
+      "v": "W_CHAPEL",
+      "distance": 70,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_CHAPEL",
+      "v": "W_LAWN_SW",
+      "distance": 124,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_INTEL_E",
+      "v": "W_LAWN_SW",
+      "distance": 65,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_SW",
+      "v": "W_ADHI_NW",
+      "distance": 41,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_EAST_1",
+      "v": "W_EAST_2",
+      "distance": 100,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_EAST_2",
+      "v": "W_SOOSAI",
+      "distance": 15,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_SOOSAI",
+      "v": "W_EAST_3",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_EAST_3",
+      "v": "W_LAWN_SE",
+      "distance": 69,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_LAWN_SE",
+      "v": "W_ADHI_NE",
+      "distance": 85,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_AUDI_E",
+      "v": "W_ADHI_NW",
+      "distance": 80,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_NW",
+      "v": "W_ADHI_N",
+      "distance": 135,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_N",
+      "v": "W_ADHI_NE",
+      "distance": 135,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_NW",
+      "v": "W_ADHI_W",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_W",
+      "v": "W_ADHI_SW",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_NE",
+      "v": "W_ADHI_E",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_E",
+      "v": "W_ADHI_SE",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_SW",
+      "v": "W_RAJA_NW",
+      "distance": 22,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ADHI_SE",
+      "v": "W_RAJA_NE",
+      "distance": 105,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_NW",
+      "v": "W_RAJA_N",
+      "distance": 105,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_N",
+      "v": "W_RAJA_NE",
+      "distance": 80,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_NW",
+      "v": "W_RAJA_W",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_W",
+      "v": "W_RAJA_SW",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_NE",
+      "v": "W_RAJA_E",
+      "distance": 50,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_E",
+      "v": "W_RAJA_SE",
+      "distance": 45,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_SW",
+      "v": "W_RAJA_S",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_S",
+      "v": "W_RAJA_SE",
+      "distance": 90,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_RAJA_SW",
+      "v": "W_ANNAM",
+      "distance": 15,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_ANNAM",
+      "v": "W_NCC",
+      "distance": 95,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_NCC",
+      "v": "W_HEALTH",
+      "distance": 115,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HEALTH",
+      "v": "W_HEALTH_NE",
+      "distance": 75,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HEALTH_NE",
+      "v": "W_HEALTH_E",
+      "distance": 55,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HEALTH_NE",
+      "v": "W_GATE4",
+      "distance": 60,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_HEALTH_E",
+      "v": "W_GATE5",
+      "distance": 25,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_GATE4",
+      "v": "W_GATE5",
+      "distance": 115,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    },
+    {
+      "u": "W_PUSHBAM_N",
+      "v": "W_ANNAM",
+      "distance": 130,
+      "tags": [
+        "main",
+        "accessible",
+        "safe"
+      ]
+    }
+  ]
+}

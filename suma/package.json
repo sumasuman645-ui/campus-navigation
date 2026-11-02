@@ -1,0 +1,21 @@
+{
+  "name": "campus-compass",
+  "version": "1.0.0",
+  "description": "Campus Compass - Futuristic Campus Digital Twin & Smart Navigation System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "campus-navigation",
+    "smart-campus",
+    "digital-twin",
+    "accessible-routing",
+    "dijkstra-algorithm",
+    "turn-by-turn"
+  ],
+  "author": "Campus Compass Team",
+  "license": "MIT"
+}
+
